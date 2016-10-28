@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+        @import url('https://fonts.googleapis.com/css?family=Quicksand');
+        @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+        @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+    </style>
+<link rel="stylesheet" type="text/css" href="theCSS.css"/>
+
+<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+<script   src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+</head>
+<body ng-app="">
+
+<div class="bgimg-1">
+  <div class="caption" id="nameDev">
+      <!-- <table>
+          <tr><td>Rashmee Prakash</td></tr>
+          <tr><td>Web Developer</td></tr>
+      </table> -->
+    <!-- <span class="border">Rashmee Prakash <br /> Web Developer</span> -->
+  </div>
+</div>
+<div class="divMenu">
+    <ul class="theMenu">
+        <li>
+            <a class="testA" href="#nameDev" data-toggle="tooltip" data-placement="right" title="About Me">
+                <span class="glyphicon glyphicon-ice-lolly"></span>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+            <a class="testA" href="#skills" data-toggle="tooltip" data-placement="right" title="Skills">
+                <span class="glyphicon glyphicon-ice-lolly"></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div style="text-align:center;padding:50px 80px;text-align: center;" class="aboutMeDiv">
+  <h1 id="aboutMe" class="aboutMe" style="text-align:center;">About Me</h1>
+  <p>
+      I am a graduate of <a href="https://www2.gmu.edu/" target="_blank">George Mason University</a>. I am currently working at <a href="http://www.hurdit.com/" target="_blank">Hurd IT Communications</a> as a Web Developer. I develop web apps from both back end (Coldfusion and Microsoft SQL Server) to front end (HTML, CSS, jQuery/Javascript), user experience and visual design for clients such as <a href="http://www.ctia.org/" target="_blank">CTIA - Everything Wireless</a>.
+  </p>
+  <p>
+       I&#39;m extremely passionate about web development and design and am constantly looking to learn new and exciting programming languages. Aside from web development, I love reading and reviewing books. I enjoy traveling to many different countries and experience their culture.
+   </p>
+  <p>
+      This is my portfolio where I showcase my projects.
+  </p>
+</div>
+
+<div class="bgimg-2" id="skills">
+  <div class="skillsCap">
+        <div class="form-group">
+            <input type="text" ng-model="searchText" class="form-control" placeholder="Enter Skill">
+            <br />
+        </div>
+        <div class="skillList">
+        <div ng-init = "skills = [{theSkill: 'HTML', skillImg: 'skills/html.png'},
+                                            {theSkill: 'CSS', skillImg: 'skills/css.png'},
+                                            {theSkill: 'JavaScript', skillImg: 'skills/js.png'},
+                                            {theSkill: 'jQuery', skillImg: 'skills/jquery.png'},
+                                            {theSkill: 'jQuery UI', skillImg: 'skills/jqueryui.png'},
+                                            {theSkill: 'AJAX', skillImg: 'skills/ajax.png'},
+                                            {theSkill: 'Bootstrap', skillImg: 'skills/bootstrap.png'},
+                                            {theSkill: 'Angular JS', skillImg: 'skills/angular.png'},
+                                            {theSkill: 'Microsoft SQL Server 2012', skillImg: 'skills/sql2012.png'},
+                                            {theSkill: 'Microsoft SQL Server 2014', skillImg: 'skills/sql2014.png'},
+                                            {theSkill: 'Microsoft SQL Server 2016', skillImg: 'skills/sql2016.png'},
+                                            {theSkill: 'Oracle Database Express Edition 11g', skillImg: 'skills/11g.png'},
+                                            {theSkill: 'Tableau Software', skillImg: 'skills/tableau.png'},
+                                            {theSkill: 'PL/SQL', skillImg: 'skills/PLSQL.png'},
+                                            {theSkill: 'ColdFusion', skillImg: 'skills/cf.png'},
+                                            {theSkill: 'ASP.Net', skillImg: 'skills/asp.png'},
+                                            {theSkill: 'PHP', skillImg: 'skills/php.png'},
+                                            {theSkill: 'Visual Basic', skillImg: 'skills/vb.png'},
+                                            {theSkill: 'Adobe Photoshop', skillImg: 'skills/photoshop.png'},
+                                            {theSkill: 'Adobe InDesign', skillImg: 'skills/inDesign.png'},
+                                            {theSkill: 'Adobe Illustrator', skillImg: 'skills/illustrator.png'},
+                                            {theSkill: 'Microsoft Office', skillImg: 'skills/office.png'}]">
+                                        </div>
+        <ul class="list-group">
+            <li class="list-group-item"  ng-repeat="skill in skills | filter:searchText"><img ng-src="{{skill.skillImg}}" class="img-rounded" /> &nbsp;&nbsp;&nbsp; {{skill.theSkill}}</li>
+        </ul>
+    </div>
+    <!-- <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span> -->
+  </div>
+</div>
+
+<div class="bgimg-3">
+    <div class="projectsCap">
+          <div class="form-group">
+              <input type="text"  class="form-control" placeholder="Enter Project/Skill">
+              <br />
+          </div>
+          <div class="projectsDiv">
+              <ul class="list-group">
+                  <li class="list-group-item" ><img src="literary/book.png" alt="book" class="img-circle" height="195" width="195" /></li>
+                  <li class="list-group-item" ><img src="DHC/dhcLogo.png" alt="dhcLogo" class="img-circle" height="195" width="195" /></li>
+                  <li class="list-group-item" ><img src="literary/book.png" alt="book" class="img-circle" height="195" width="195" /></li>
+              </ul>
+          </div>
+    </div>
+</div>
+
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div>
+
+</body>
+</html>

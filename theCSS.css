@@ -1,0 +1,207 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  color: #777;
+}
+
+.aboutMeDiv {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    color: #f2e6ff;
+    background-color: #737373;
+}
+
+.aboutMeDiv .aboutMe {
+    color: #000;
+}
+
+.aboutMeDiv a {
+    color: #4da6ff;
+}
+
+.bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  /*opacity: 0.65;*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("me5.png");
+  min-height: 100%;
+}
+.divMenu {
+    height: 25%;
+    z-index: 100;
+    position: fixed;
+    bottom: 75%;
+    left: 89.75%;
+}
+
+.testA + .tooltip > .tooltip-inner {
+      background-color: #000;
+      color: #FFFFFF;
+      opacity: 0.65;
+      font-family: 'Poiret One', cursive;
+  }
+
+.bgimg-2 {
+  background-image: url("theBulb.png");
+  min-height: 100%;
+  opacity: 0.75;
+}
+
+.bgimg-3 {
+  background-image: url("projects1.png");
+  width: 100%;
+  min-height: 100%;
+}
+
+.projectsDiv .list-group {
+    height: 467px;
+    overflow: auto;
+    opacity: 1;
+    width: 70%;
+}
+
+.projectsDiv .list-group::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #216577;
+	border-radius: 10px;
+}
+
+.projectsDiv .list-group::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #216577;
+}
+
+.projectsDiv .list-group::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(15, 23, 42)),
+									   color-stop(0.72, rgb(41, 62, 112)),
+									   color-stop(0.86, rgb(15, 23, 42)));
+}
+
+.projectsDiv .list-group .list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: transparent;
+    border: none;
+}
+
+.projectsCap {
+    position: absolute;
+    left: 33%;
+    /*right: -250px;*/
+    top: 7%;
+    bottom: 0.25%;
+    width: 100%;
+    padding-right: 200px;
+}
+
+.bgimg-4 {
+  background-image: url("photo23.png");
+  min-height: 100%;
+}
+
+.theMenu {
+    list-style-type: none;
+    float: right;
+    padding: 50px;
+    overflow: auto;
+}
+
+.theMenu li {
+    white-space: nowrap;
+}
+
+.glyphicon {
+    color: #a30527;
+    opacity: 0.95;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 75%;
+  text-align: center;
+  color: #000;
+}
+
+.skillsCap {
+    position: absolute;
+    left: 0;
+    top: 5%;
+    bottom: 0.25%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    padding-left: 200px;
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+}
+
+.caption table {
+    background-color: #00004d;
+    opacity: 0.65;
+    color: #fff;
+    padding: 19px;
+    font: 39px 'Quicksand', sans-serif;
+    letter-spacing: 7px;
+    margin: 0 auto;
+}
+
+.caption span.border {
+  background-color: #111;
+  opacity: 0.65;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 7px;
+}
+
+.form-group {
+    width: 45%;
+}
+
+.form-group .form-control {
+    /*margin: 0 auto;*/
+    text-align: center;
+    font-size: 25px;
+}
+
+.skillList .list-group {
+    height: 467px;
+    overflow: auto;
+    opacity: 1;
+}
+
+.list-group {
+    text-align: left;
+    width: 50%;
+}
+
+.aboutMe {
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  font-family: 'Architects Daughter', cursive;
+  color: #111;
+}
