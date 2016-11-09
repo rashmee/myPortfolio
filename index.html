@@ -29,6 +29,19 @@
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    $(function(){
+    $('[rel="popover"]').popover({
+        container: 'body',
+        html: true,
+        content: function () {
+            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    });
+});
 </script>
 
 </head>
@@ -75,7 +88,7 @@
 <div class="bgimg-2" id="skills">
   <div class="skillsCap">
         <div class="form-group">
-            <input type="text" ng-model="searchText" class="form-control" placeholder="Enter Skill">
+            <input type="text" ng-model="searchSkill" class="form-control" placeholder="Enter Skill">
             <br />
         </div>
         <div class="skillList">
@@ -103,7 +116,7 @@
                                             {theSkill: 'Microsoft Office', skillImg: 'skills/office.png'}]">
                                         </div>
         <ul class="list-group">
-            <li class="list-group-item"  ng-repeat="skill in skills | filter:searchText"><img ng-src="{{skill.skillImg}}" class="img-rounded" /> &nbsp;&nbsp;&nbsp; {{skill.theSkill}}</li>
+            <li class="list-group-item"  ng-repeat="skill in skills | filter:searchSkill"><img ng-src="{{skill.skillImg}}" class="img-rounded" /> &nbsp;&nbsp;&nbsp; {{skill.theSkill}}</li>
         </ul>
     </div>
     <!-- <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span> -->
@@ -113,14 +126,35 @@
 <div class="bgimg-3">
     <div class="projectsCap">
           <div class="form-group">
-              <input type="text"  class="form-control" placeholder="Enter Project/Skill">
+              <input type="text" ng-model="searchProject"  class="form-control" placeholder="Enter Project/Skill">
               <br />
           </div>
           <div class="projectsDiv">
+              <div id="myPopover" class="hide">
+	This is a popover list:
+	<ul>
+		<li>List item 1</li>
+		<li>List item 2</li>
+		<li>List item 3</li>
+	</ul>
+</div>
+              <div ng-init = "projects = [
+              {theProject: 'Literary', projectImg: 'projects/literary/book.png', projectContent: 'myPopover'},
+              {theProject: 'DHC', projectImg: 'projects/DHC/dhcLogo.png'},
+              {theProject: 'Foodograph', projectImg: 'projects/foodograph/theApp.png'},
+              {theProject: 'Harry Potter Course Catalog', projectImg: 'projects/hp/hp2.png'},
+              {theProject: 'Discovery Car Dealership', projectImg: 'projects/discovery/discovery.png'},
+              {theProject: 'Horseman Gather Stables', projectImg: 'projects/horse/horse.png'},
+              {theProject: 'Reed Moore Library', projectImg: 'projects/library/books.png'},
+              {theProject: 'Guest Book', projectImg: 'projects/php/gBook.png'},
+              {theProject: 'Life Expectancy of Females and Males', projectImg: 'projects/tableau/tableau.png'},
+              {theProject: 'Stop Domestic Violence', projectImg: 'projects/stopDV/DVlogo.png'},
+              {theProject: 'Website on the Country Timor Leste', projectImg: 'projects/timorLeste/tL.png'}
+              ]">
+              </div>
               <ul class="list-group">
-                  <li class="list-group-item" ><img src="literary/book.png" alt="book" class="img-circle" height="195" width="195" /></li>
-                  <li class="list-group-item" ><img src="DHC/dhcLogo.png" alt="dhcLogo" class="img-circle" height="195" width="195" /></li>
-                  <li class="list-group-item" ><img src="literary/book.png" alt="book" class="img-circle" height="195" width="195" /></li>
+                  <!-- <a href="#" rel="popover" title="Popover Header" data-popover-content="#myPopover" data-trigger="focus">My Popover</a> -->
+                  <li class="list-group-item"  ng-repeat="project in projects | filter:searchProject"><a href="#" rel="popover" title="Popover Header" data-popover-content="#{{project.projectContent}}" data-trigger="focus"><img ng-src="{{project.projectImg}}" class="img-circle" width="195" height="195" /></a> &nbsp;&nbsp;&nbsp; <span class="projectName">{{project.theProject}}</span></li>
               </ul>
           </div>
     </div>

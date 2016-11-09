@@ -107,6 +107,11 @@ body, html {
     border: none;
 }
 
+.projectsDiv .list-group .list-group-item .projectName {
+    color: #f2e6ff;
+    font-size: 27px;
+}
+
 .projectsCap {
     position: absolute;
     left: 33%;
@@ -115,6 +120,7 @@ body, html {
     bottom: 0.25%;
     width: 100%;
     padding-right: 200px;
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
 }
 
 .bgimg-4 {
