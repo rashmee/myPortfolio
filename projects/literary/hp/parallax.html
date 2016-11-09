@@ -1,0 +1,402 @@
+<!doctype html>
+<html data-ng-app="">
+<head>
+<meta charset="UTF-8">
+<title>Create Your Own Literary ID</title>
+<link href="theCSS.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<script type="text/javascript" src="parallax/html2canvas.js"></script>
+<script type="text/javascript" src="parallax/html2canvas.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+
+
+<script type="text/javascript">
+$('#nav').localScroll(800);
+$('#mainPage').parallax("50%", 0.1);
+$('#enterInfo').parallax("50%", 0.1);
+$('#intro').parallax("50%", 0.1);
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+	
+	function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+	
+	function pgLoad()
+	{
+		document.getElementById('sImg').style.display = 'none';
+		document.getElementById('hImg').style.display = 'none';
+		document.getElementById('gImg').style.display = 'none';
+		document.getElementById('rImg').style.display = 'none';
+		document.getElementById('ssSig').style.display = 'none';
+		document.getElementById('mmSig').style.display = 'none';
+		document.getElementById('ffSig').style.display = 'none';
+		document.getElementById('psSig').style.display = 'none';
+		document.getElementById('enterInfo').style.display = 'none';
+		document.getElementById('intro').style.display = 'none';
+		document.getElementById('enterHPButton').style.display = 'none';
+		document.getElementById('viewHPImage').style.display = 'none';
+		document.getElementById('second').style.display = 'none';
+		document.getElementById('third').style.display = 'none';
+		document.getElementById('fifth').style.display = 'none';
+		document.getElementById('updateButton').style.display = 'none';
+	}
+	
+	function theClicks()
+	{
+		var hpDDL = document.getElementById('theHouse').value;
+		
+		if(hpDDL == "gryfOpt")
+		{
+			document.getElementById('gImg').style.display = 'block';
+			document.getElementById('mmSig').style.display = 'block';
+			document.getElementById('sImg').style.display = 'none';
+			document.getElementById('ssSig').style.display = 'none';
+			document.getElementById('rImg').style.display = 'none';
+			document.getElementById('ffSig').style.display = 'none';
+			document.getElementById('hImg').style.display = 'none';
+			document.getElementById('psSig').style.display = 'none';
+			document.getElementById('houseGhost').innerHTML = "House Ghost: Nearly Headless Nick";
+		}
+		
+		if(hpDDL == "slythOpt")
+		{
+			document.getElementById('gImg').style.display = 'none';
+			document.getElementById('mmSig').style.display = 'none';
+			document.getElementById('sImg').style.display = 'block';
+			document.getElementById('ssSig').style.display = 'block';
+			document.getElementById('rImg').style.display = 'none';
+			document.getElementById('ffSig').style.display = 'none';
+			document.getElementById('hImg').style.display = 'none';
+			document.getElementById('psSig').style.display = 'none';
+			document.getElementById('houseGhost').innerHTML = "House Ghost: The Bloody Baron";
+		}
+		
+		if(hpDDL == "ravOpt")
+		{
+			document.getElementById('gImg').style.display = 'none';
+			document.getElementById('mmSig').style.display = 'none';
+			document.getElementById('sImg').style.display = 'none';
+			document.getElementById('ssSig').style.display = 'none';
+			document.getElementById('rImg').style.display = 'block';
+			document.getElementById('ffSig').style.display = 'block';
+			document.getElementById('hImg').style.display = 'none';
+			document.getElementById('psSig').style.display = 'none';
+			document.getElementById('houseGhost').innerHTML = "House Ghost: The Grey Lady";
+		}
+		
+		if(hpDDL == "huffOpt")
+		{
+			document.getElementById('gImg').style.display = 'none';
+			document.getElementById('mmSig').style.display = 'none';
+			document.getElementById('sImg').style.display = 'none';
+			document.getElementById('ssSig').style.display = 'none';
+			document.getElementById('rImg').style.display = 'none';
+			document.getElementById('ffSig').style.display = 'none';
+			document.getElementById('hImg').style.display = 'block';
+			document.getElementById('psSig').style.display = 'block';
+			document.getElementById('houseGhost').innerHTML = "House Ghost: Fat Friar";
+		}
+	}
+	
+	function thePrint()
+	{
+		html2canvas($('#hpImplement'), {
+		//"logging":true,
+			onrendered: function(canvas) {
+				var theCanvas = canvas.toDataURL("image/png");
+           			var elem = document.createElement("img");
+           			elem.setAttribute("src", theCanvas);
+           			elem.setAttribute("alt", "hpID");
+           			elem.setAttribute("id", "theHPID");
+           			elem.setAttribute("border", 3);
+           			document.getElementById("hpShare").appendChild(elem);
+				//document.getElementById('hpShare').appendChild(canvas);
+			},
+		});
+		
+		document.getElementById('enterHPButton').style.display= 'none';
+		document.getElementById('viewHPImage').style.display= 'block';
+		
+		
+	}
+	
+	function theUpdateHP() {
+		document.getElementById('hpShare').innerHTML = "";
+		html2canvas($('#hpImplement'), {
+		//"logging":true,
+			onrendered: function(canvas) {
+				var theCanvas = canvas.toDataURL("image/png");
+           			var elem = document.createElement("img");
+           			elem.setAttribute("src", theCanvas);
+           			elem.setAttribute("alt", "hpID");
+           			elem.setAttribute("id", "theHPID");
+           			elem.setAttribute("border", 3);
+           			document.getElementById("hpShare").appendChild(elem);
+					},
+		});
+		
+		document.getElementById('enterHPButton').style.display= 'none';
+		document.getElementById('viewHPImage').style.display= 'block';
+	}
+
+	//function theChecks
+	function theChecks() 
+	{
+		var hp =  document.getElementById('enterHP');
+		if(hp.checked== true) {
+			document.getElementById('theMain').style.display= 'none';
+			document.getElementById('mainPage').style.backgroundImage= "url('parallax/hpbg.png')"; 
+			document.getElementById('enterHPButton').style.display= 'block';
+			
+			
+		}
+	}
+	//End function
+	
+	function createHP() {
+		document.getElementById('enterInfo').style.display = 'block';
+	}
+	
+	function viewHPImage() {
+		document.getElementById('intro').style.display = 'block';
+	}
+	
+	function openFB() {
+		var myWindow = window.open("https://www.facebook.com/sharer/sharer.php?u=http://www.rashmeeprakash.com/literary.html", "Facebook", "width=750, height=600");
+	}
+	
+	function updateHP() {
+		document.getElementById('printButton').style.display = 'none';
+		document.getElementById('updateButton').style.display = 'block';
+	}
+	
+	/*function randGen() {
+		var words = ["monitor", "program", "application", "keyboard", "javascript", "gaming", "network"];
+
+var getRandomWord = function () {
+    return words[Math.floor(Math.random() * words.length)];
+};
+
+var word = getRandomWord();
+
+console.log(word);
+	}*/
+	
+	function theWand() {
+		var sizes = ['8¾', '9', '9¼', '9½', '9¾', '10', '10¼', '10½', '10¾', '11', '11¼', '11½', '11¾', '12', '12¼', '12½', '12¾', '13', '13¼', '13½', '13¾', '14', '14¼', '14½', '14¾', '15'];
+		var woods = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beech', 'Birch', 'Blackthorn', 'Black Walnut', 'Cedar', 'Cherry',
+'Chestnut', 'Cypress', 'Dogwood', 'Ebony', 'Elder', 'Elm', 'Fir',
+'Hawthorn', 'Hazel', 'Holly', 'Hornbeam', 'Ivy', 'Larch', 'Laurel',
+'Mahogany', 'Maple', 'Oak', 'Pear', 'Pine', 'Poplar', 'Redwood',
+'Reed', 'Rosewood', 'Rowan', 'Silver lime', 'Spruce', 'Sycamore',
+'Vine', 'Walnut', 'Willow', 'Yew',];
+		var cores = ['Dragon heartstring core', 'Phoenix feather core', 'Unicorn tail hair core', 'Veela hair core', 'Thestral tail hair core', 'Troll whisker core', 'Coral core' ];
+		var flexs = ['Unyielding', 'Reasonably springy', 'Inflexible', 'Slightly bendy', 'Nice and supple', 'Pliant', 'Swishy', 'Stiff', 'Brittle', 'Bendy', 'Rather bendy', 'Whippy', 'Quite rigid'];
+		var size = sizes[Math.floor(Math.random()*sizes.length)];
+		var wood = woods[Math.floor(Math.random()*woods.length)];
+		var core = cores[Math.floor(Math.random()*cores.length)];
+		var flex = flexs[Math.floor(Math.random()*flexs.length)];
+		document.getElementById('addWand').innerHTML = "Wand: " + " " + size + "in., " + wood + ", " + core + ", " + flex;
+		//document.getElementById('wandSize').value = size;
+		//document.getElementById('wandWood').value = wood;
+		//document.getElementById('wandCore').value = core;
+		//document.getElementById('wandFlex').value = flex;
+	}
+	
+	function genPat() {
+		var pats = ['Swan', 'Goat', 'Phoenix', 'Fox', 'Woolly Mammoth', 'Otter', 'Stag', 'Hare', 'Boar', 'Cat', 'Doe', 'Ladybird', 'Lynx', 'Wolf', 'Jack Rabbit', 'Weasel', 'Horse', 'Jack Russell Terrier', 'Cat'];
+		var pat = pats[Math.floor(Math.random()*pats.length)];
+		document.getElementById('addPat').innerHTML = "Patronus: " + pat;
+		//document.getElementById('genPat').value = pats;
+	}
+	
+</script>
+</head>
+
+<body id="forP" onLoad="pgLoad()">
+    
+    <div id="mainPage" style="background-image:url(parallax/p1.png)">
+    <div class="story">
+    <h1 align="center" id="enterHPButton"><a href="#enterInfo" onClick="createHP()">Enter Site</a></h1>
+    <h1 align="center" id="viewHPImage"><a href="#intro" onClick="viewHPImage()">View and Share Image</a></h1>
+    <div id="theMain" align="center">
+    <h1 align="center">Create your Own ID Card</h1>
+    <p align="center">This website is for all the fans of Harry Potter. It allows the user to be a part or gain an ID card to be a part of this magical world. </p>
+    <p align="center">Please check the box below to start your creation.</p>
+    <!--<p align="center"><input type="text" id="enterWork" placeholder="Enter your Choice of Work" size="50" /></p>-->
+    
+    <ul id="theFilter">
+    	<li><input type="checkbox" id="enterHP" onClick="theChecks()" />Harry Potter</li>
+        <!--<li><input type="checkbox" id="enterHG" onClick="theChecks()" />Hunger Games</li>
+        <li><input type="checkbox" id="enterDiv" onClick="theChecks()" />Divergent</li>
+        <li><input type="checkbox" id="enterJA" onClick="theChecks()" />The World of Jane Austen</li>
+        <li><input type="checkbox" id="enterDPF" onClick="theChecks()" />Disney Princess</li>
+        <li><input type="checkbox" id="enterDPM" onClick="theChecks()" />Disney Prince</li>
+        <li><input type="checkbox" id="enterGOT" onClick="theChecks()" />Game of Thrones</li>
+        <li><input type="checkbox" id="enterLOTR" onClick="theChecks()" />Lord of the Rings</li>
+        <li><input type="checkbox" id="enterSP" onClick="theChecks()" />The World of Shakespeare</li>-->
+    </ul>
+	
+    </div>
+    
+    </div>
+    </div>
+    
+ <!--Harry Potter Page-->   
+    <div id="enterInfo">
+    <div class="story">
+    <div id="theForm">
+<h1 align="center"><u>Create your Own Personalized Wallpapers</u></h1>
+    
+    Enter Name: <input type="text" data-ng-model="searchName" id="headId"/> 
+    <br />
+    <br />
+    Birthday: <input type="date" name= "bday" data-ng-model="theBday" />
+    <br />
+    <br />
+    School House: <select data-ng-model="theHouse" id="theHouse">
+        <option value="gryfOpt" onClick="onClicks()">Gryffindor</option>
+        <option value="slythOpt" onClick="onClicks()">Slytherin</option>
+        <option value="ravOpt" onClick="onClicks()">Ravenclaw</option>
+        <option value="huffOpt" onClick="onClicks()">Hufflepuff</option>
+    </select>
+    <br />
+    <br />
+    <button type="button" id="wand" onClick="theWand()">The wand chooses the wizard</button> 
+    <br />
+    <br />
+    Pet: <select data-ng-model="thePet" id="pet">
+    <option value="Owl" onClick="onClicks()">Owl</option>
+    <option value="Cat" onClick="onClicks()">Cat</option>
+    <option value="Toad" onClick="onClicks()">Toad</option>
+    <option value="Rat" onClick="onClicks()">Rat</option>
+    </select>
+    <br />
+    <br />
+    <button type="button" onClick="genPat()">Expecto Patronum!!!</button> 
+    <br />
+    <br />
+    Boggart: <input type="text" data-ng-model="theBog">
+    <br />
+    <br />
+    Hobbies: <input type="text" data-ng-model="theHob">
+    <br />
+    <br />
+    Clubs: <input type="text" data-ng-model="theClub">
+    <br />
+    <br />
+    Add Information: <textarea rows="4" cols="50" data-ng-model="addQuote" id="txtarea" maxlength="100">
+    </textarea>
+    <br />
+    Upload Image: <input type='file' onchange="readURL(this);" data-ng-model="theImg" />
+    <br />
+    <button type="button" id="hdbut" onClick="theClicks()">Preview</button>
+    <br />
+    <button type="button" id="printButton" onClick="thePrint()">Done!</button>
+    <button type="button" id="updateButton" onClick="theUpdateHP()">Update!</button>
+	</div>
+    <div id="hpImplement">
+    <h1 align="center">Hogwarts Student Id</h1>
+    <img style="float:left" id="gImg" src="parallax/gm.png" height="500" width="125" />
+        <img style="float:left" id="sImg" src="parallax/sm.png" height="500" width="125" />
+        <img style="float:left" id="rImg" src="parallax/rm.png" height="500" width="125" />
+        <img style="float:left" id="hImg" src="parallax/hm.png" height="500" width="125" />
+        <img style="float:left" id="blah" src="parallax/hpavatar.png" height="200" width="150" {{ theImg }} />
+        <p><b>Name: </b> {{ searchName }} </p>
+        <p><b>Birthday: </b> {{ theBday }}</p>
+        <p id="addWand"></p>
+        <p><b>Pet: </b> {{ thePet }} </p>
+        <p id="houseGhost"></p>
+        <p id="addPat"></p>
+        <p><b>Boggart: </b> {{ theBog }} </p>
+        <p><b>Hobbies: </b> {{ theHob }} </p>
+        <p><b>Club: </b> {{ theClub }} </p>
+        <p><b>Personal Statement: </b> {{ addQuote }} </p>
+        <p><b>Head Of House Signature: </b></p>
+        <p><img id="ssSig" src="parallax/ss.png" height="45" width="350" />
+        <img id="mmSig" src="parallax/mm.png" height="45" width="350" />
+        <img id="ffSig" src="parallax/ff.png" height="45" width="350" />
+        <img id="psSig" src="parallax/ps.png" height="45" width="350" />
+        </p>
+	</div>
+    </div>
+    </div>
+    
+    <div id="intro">
+		<div class="story">
+        <div id="hpShare" align="left">
+        </div>	
+        <div id="hpWidgets" align="left">
+        	<h1>Share Website!</h1>
+            <p>To save the image, right click on the image and to make changes to the image click on the arrow icon below and then click Create.</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.rashmeeprakash.com/literary.html" data-text="Check Out This Website and create your own Harry Potter ID" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+ <br />
+ <br />
+ <img src="parallax/facebook.png" height="50" width="50" onClick="openFB()"  />
+ 
+ <!--<br />
+ <br />
+ <img src="parallax/print_icon.jpg" height="50" width="50" onClick="printHP()" id="printHP" />-->
+ 
+	<div align="right"><a href="#enterInfo"><img src="parallax/up-arrow-circle-md.png" height="50" width="50" id="navHP" onClick="updateHP()" /></a></div>
+        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+    
+    <div id="second">
+		<div class="story">
+        <h1 align="center"> {{ searchName }} </h1>
+        <div class="bg"></div>
+	    	<div class="float-right">
+	            
+	            
+	        </div>
+	    </div> <!--.story-->
+	    
+	</div> <!--#second-->
+    
+    <div id="third">
+		<div class="story">
+        <h1 align="center"> {{ searchName }} </h1>
+	    	<div class="float-left">
+	        	<h2>What Happens When JavaScript is Disabled?</h2>
+	            <p>The user gets a slap! Actually, all that jQuery does is moves the backgrounds relative to the position of the scrollbar. Without it, the backgrounds simply stay put and the user would never know they are missing out on the awesome! CSS2 does a good enough job to still make the effect look cool.</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#third-->
+    
+    <div id="fifth">
+		<div class="story">
+        <h1 align="center"> {{ searchName }} </h1>
+		    
+            
+             </div> <!--.story-->
+	</div> <!--#fifth-->
+
+</body>
+</html>
