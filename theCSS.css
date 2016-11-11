@@ -112,6 +112,15 @@ body, html {
     font-size: 27px;
 }
 
+.popover-title {
+    font-family: 'Josefin Slab', serif;
+    font-size: 19px;
+}
+.popover-content {
+    font-family: 'Josefin Slab', serif;
+    font-size: 19px;
+}
+
 .projectsCap {
     position: absolute;
     left: 33%;
