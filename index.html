@@ -5,7 +5,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Cormorant+Garamond|Poiret+One|Josefin+Slab|Quicksand|Tangerine');
     </style>
-<link rel="stylesheet" type="text/css" href="theCSS.css"/>
 
 <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 
@@ -20,6 +19,8 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<link rel="stylesheet" type="text/css" href="theCSS.css"/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
 <script type="text/javascript">
@@ -29,7 +30,7 @@
 
     $(function(){
     $('[rel="popover"]').popover({
-        container: '.projectsCap',
+        container: '.projectsDiv',
         html: true,
         content: function () {
             var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
@@ -130,6 +131,7 @@
               <div class="thePopovers">
                     <div id="litPopover" class="hide myPopovers">
 	                       <h3><u>Create Your Own Literary ID</u></h3>
+                           <br />
                            <p>
                                This website is for all the fans of great literary works of fiction. It allows the user to create an ID card  for themselves to be a part of the fictional world of their choice. The choice varies from the world of Jane Austen to the magical world of Harry Potter to brave world of the Hunger Games.
                             </p>
@@ -153,7 +155,7 @@
               </div>
               <ul class="list-group">
                   <!-- <a href="#" rel="popover" title="Popover Header" data-popover-content="#myPopover" data-trigger="focus">My Popover</a> -->
-                  <li class="list-group-item"  ng-repeat="project in projects | filter:searchProject"><a href="#" rel="popover" title="{{project.theProject}}" data-container="#wrap"  data-popover-content="#{{project.projectContent}}" data-trigger="focus"><img ng-src="{{project.projectImg}}" class="img-circle" width="195" height="195" /></a> &nbsp;&nbsp;&nbsp; <span class="projectName">{{project.theProject}}</span></li>
+                  <li class="list-group-item"  ng-repeat="project in projects | filter:searchProject"><a href="#" rel="popover" title="{{project.theProject}}" data-popover-content="#{{project.projectContent}}"><img ng-src="{{project.projectImg}}" class="img-circle" width="195" height="195" /></a> &nbsp;&nbsp;&nbsp; <span class="projectName">{{project.theProject}}</span></li>
               </ul>
           </div>
     </div>

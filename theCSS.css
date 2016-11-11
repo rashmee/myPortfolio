@@ -112,6 +112,9 @@ body, html {
     font-size: 27px;
 }
 
+.popover {
+    max-width: 500px;
+}
 
 .popover-title {
     font-family: 'Josefin Slab', serif;
@@ -120,6 +123,10 @@ body, html {
 .popover-content {
     font-family: 'Josefin Slab', serif;
     font-size: 19px;
+}
+
+.myPopovers h3 {
+    text-align: center;
 }
 
 .projectsCap {
