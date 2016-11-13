@@ -1,0 +1,382 @@
+body {
+  position: relative;
+  left: 0;
+  overflow-x: hidden;
+}
+
+#slide_menu {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+  background: #E87272;
+  overflow:scroll;
+}
+
+#slide_menu ul {
+  padding: 0;
+  margin: 0;
+  overflow:scroll;
+}
+
+#slide_menu li + li {
+border-top: solid 1px #f39191;
+overflow:scroll;
+}
+
+#slide_menu li {
+  border-bottom: solid 1px #d56767;
+  list-style: none;
+  overflow:scroll;
+}
+
+#slide_menu li a {
+  display: block;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  overflow:scroll;
+}
+
+/* name */
+
+
+
+#name {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 40px;
+	}
+
+#abtMe {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	}
+
+.pAbtMe {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	}
+
+#theProjects {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	margin-bottom: 10px;
+	width: 767px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+
+#theGraphs {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	margin-bottom: 10px;
+	width: 767px;
+	text-align:left;
+}
+
+#header {
+	text-align:center;
+	float: top;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+#footer {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	float:bottom;
+	text-align:center;
+	margin-top: 20px;
+	margin-bottom: 10x;
+	clear: both;
+	}
+
+.projImages {
+	border-style: inset;
+	border-width: medium;
+	border-color: #DD3A3C;
+	padding: 25px 50 px;
+	}
+
+.iosimages {
+	float:left;
+}
+
+.projectListImgs {
+	float:left;
+	margin: 25px;
+}
+
+@charset "utf-8";
+/* CSS Document */
+
+#forP {
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+}
+
+
+
+img{
+	border: 0;
+}
+
+
+
+.float-left{
+	float: left;
+	margin: 0 0 0 20px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#dots{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+#dots li{
+	margin: 0 0 15px 0;
+}
+
+#mainPage {
+	background-size: 100% 100%;
+	color: black;
+	height: 750px;
+	max-height:100%;
+	max-width:100%;
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Comfortaa', cursive;
+}
+
+#enterHPButton {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#viewHPImage {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#enterHPButton:link {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#viewHPImage:link {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#enterHPButton:visited {
+    font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#viewHPImage:visited {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#enterHPButton:hover {
+    font-family: 'Great Vibes', cursive;
+	color: #02F902;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#viewHPImage:hover {
+	font-family: 'Great Vibes', cursive;
+	color: #02F902;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#enterHPButton:active {
+    font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+#viewHPImage:active {
+	font-family: 'Great Vibes', cursive;
+	color: #F00A0E;
+	font-size:85px;
+	text-decoration:underline;
+}
+
+
+#enterInfo {
+	background: #000;
+	color: white;
+	height: 750px;
+	margin: 0 auto;
+	padding: 0;
+	width:100%;
+	clear:both;
+}
+
+#theForm {
+     width: 25%;
+     background-color: #111;
+	 float:left;
+	 color: white;
+	 max-height:100%;
+	 background: #000;
+	height: 750px;
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	max-width:100%;
+}
+
+#hpImplement {
+     width: 75%;
+     background-color: #777;
+	 float:left;
+	 max-height:100%;
+	 background: url(hp/hp4.png) 50% 0 no-repeat fixed;
+	 color: black;
+	 height: 750px;
+	 max-height:100%;
+	 max-width:100%;
+	 margin: 0 auto;
+	 padding: 0;
+	 font-family: 'Architects Daughter', cursive;
+	 font-weight:900;
+	 font-size:19px;
+}
+
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+#intro{
+	background: #fff 50% 0 no-repeat fixed;
+	color: black;
+	height: 750px;
+	max-height:100%;
+	max-width:100%;
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-weight:900;
+	font-size:14px;
+	width:100%;
+}
+
+#hpShare {
+	width:75%;
+	float:left;
+	max-height:100%;
+
+}
+
+#hpWidgets {
+	width:25%;
+	float:left;
+	max-height:100%;
+}
+
+#hpDownload {
+}
+
+#second{
+	background: url(hp/sky.png) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#second .bg{
+background: url(hp/moon.png) 50% 0 no-repeat fixed;
+height: 1300px;
+margin: 0 auto;
+padding: 0;
+position: absolute;
+width: 900px;
+z-index: 200;
+}
+
+#third{
+	background: url(hp/snow.png) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;
+}
+
+#fifth{
+	background: url(hp/dark.png) 50% 0 no-repeat fixed;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;
+}
+
+.story{
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 100px 0 0 0;
+	position: relative;
+	width: 350px;
+}
+
+#contactFieldset {
+    margin: 0 auto;
+    width: 300px;
+    align-items: center;
+}
+
+#theFilter {
+	list-style-type: none;
+	overflow: auto;
+}
+
+#theValidate {
+    color: red;
+}
+#theThankYou {
+    color: rebeccapurple;
+}
+#theSorry {
+    color: red;
+}

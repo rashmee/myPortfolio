@@ -9,8 +9,8 @@
 <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-<script type="text/javascript" src="parallax/html2canvas.js"></script>
-<script type="text/javascript" src="parallax/html2canvas.min.js"></script>
+<script type="text/javascript" src="hp/html2canvas.js"></script>
+<script type="text/javascript" src="hp/html2canvas.min.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@ $('#intro').parallax("50%", 0.1);
 	$('#second').parallax("50%", 0.1);
 	$('.bg').parallax("50%", 0.4);
 	$('#third').parallax("50%", 0.3);
-	
+
 	function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -44,7 +44,7 @@ $('#intro').parallax("50%", 0.1);
             reader.readAsDataURL(input.files[0]);
         }
     }
-	
+
 	function pgLoad()
 	{
 		document.getElementById('sImg').style.display = 'none';
@@ -64,11 +64,11 @@ $('#intro').parallax("50%", 0.1);
 		document.getElementById('fifth').style.display = 'none';
 		document.getElementById('updateButton').style.display = 'none';
 	}
-	
+
 	function theClicks()
 	{
 		var hpDDL = document.getElementById('theHouse').value;
-		
+
 		if(hpDDL == "gryfOpt")
 		{
 			document.getElementById('gImg').style.display = 'block';
@@ -81,7 +81,7 @@ $('#intro').parallax("50%", 0.1);
 			document.getElementById('psSig').style.display = 'none';
 			document.getElementById('houseGhost').innerHTML = "House Ghost: Nearly Headless Nick";
 		}
-		
+
 		if(hpDDL == "slythOpt")
 		{
 			document.getElementById('gImg').style.display = 'none';
@@ -94,7 +94,7 @@ $('#intro').parallax("50%", 0.1);
 			document.getElementById('psSig').style.display = 'none';
 			document.getElementById('houseGhost').innerHTML = "House Ghost: The Bloody Baron";
 		}
-		
+
 		if(hpDDL == "ravOpt")
 		{
 			document.getElementById('gImg').style.display = 'none';
@@ -107,7 +107,7 @@ $('#intro').parallax("50%", 0.1);
 			document.getElementById('psSig').style.display = 'none';
 			document.getElementById('houseGhost').innerHTML = "House Ghost: The Grey Lady";
 		}
-		
+
 		if(hpDDL == "huffOpt")
 		{
 			document.getElementById('gImg').style.display = 'none';
@@ -121,7 +121,7 @@ $('#intro').parallax("50%", 0.1);
 			document.getElementById('houseGhost').innerHTML = "House Ghost: Fat Friar";
 		}
 	}
-	
+
 	function thePrint()
 	{
 		html2canvas($('#hpImplement'), {
@@ -137,13 +137,13 @@ $('#intro').parallax("50%", 0.1);
 				//document.getElementById('hpShare').appendChild(canvas);
 			},
 		});
-		
+
 		document.getElementById('enterHPButton').style.display= 'none';
 		document.getElementById('viewHPImage').style.display= 'block';
-		
-		
+
+
 	}
-	
+
 	function theUpdateHP() {
 		document.getElementById('hpShare').innerHTML = "";
 		html2canvas($('#hpImplement'), {
@@ -158,42 +158,42 @@ $('#intro').parallax("50%", 0.1);
            			document.getElementById("hpShare").appendChild(elem);
 					},
 		});
-		
+
 		document.getElementById('enterHPButton').style.display= 'none';
 		document.getElementById('viewHPImage').style.display= 'block';
 	}
 
 	//function theChecks
-	function theChecks() 
+	function theChecks()
 	{
 		var hp =  document.getElementById('enterHP');
 		if(hp.checked== true) {
 			document.getElementById('theMain').style.display= 'none';
-			document.getElementById('mainPage').style.backgroundImage= "url('parallax/hpbg.png')"; 
+			document.getElementById('mainPage').style.backgroundImage= "url('hp/hpbg.png')";
 			document.getElementById('enterHPButton').style.display= 'block';
-			
-			
+
+
 		}
 	}
 	//End function
-	
+
 	function createHP() {
 		document.getElementById('enterInfo').style.display = 'block';
 	}
-	
+
 	function viewHPImage() {
 		document.getElementById('intro').style.display = 'block';
 	}
-	
+
 	function openFB() {
 		var myWindow = window.open("https://www.facebook.com/sharer/sharer.php?u=http://www.rashmeeprakash.com/literary.html", "Facebook", "width=750, height=600");
 	}
-	
+
 	function updateHP() {
 		document.getElementById('printButton').style.display = 'none';
 		document.getElementById('updateButton').style.display = 'block';
 	}
-	
+
 	/*function randGen() {
 		var words = ["monitor", "program", "application", "keyboard", "javascript", "gaming", "network"];
 
@@ -205,7 +205,7 @@ var word = getRandomWord();
 
 console.log(word);
 	}*/
-	
+
 	function theWand() {
 		var sizes = ['8¾', '9', '9¼', '9½', '9¾', '10', '10¼', '10½', '10¾', '11', '11¼', '11½', '11¾', '12', '12¼', '12½', '12¾', '13', '13¼', '13½', '13¾', '14', '14¼', '14½', '14¾', '15'];
 		var woods = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beech', 'Birch', 'Blackthorn', 'Black Walnut', 'Cedar', 'Cherry',
@@ -226,20 +226,20 @@ console.log(word);
 		//document.getElementById('wandCore').value = core;
 		//document.getElementById('wandFlex').value = flex;
 	}
-	
+
 	function genPat() {
 		var pats = ['Swan', 'Goat', 'Phoenix', 'Fox', 'Woolly Mammoth', 'Otter', 'Stag', 'Hare', 'Boar', 'Cat', 'Doe', 'Ladybird', 'Lynx', 'Wolf', 'Jack Rabbit', 'Weasel', 'Horse', 'Jack Russell Terrier', 'Cat'];
 		var pat = pats[Math.floor(Math.random()*pats.length)];
 		document.getElementById('addPat').innerHTML = "Patronus: " + pat;
 		//document.getElementById('genPat').value = pats;
 	}
-	
+
 </script>
 </head>
 
 <body id="forP" onLoad="pgLoad()">
-    
-    <div id="mainPage" style="background-image:url(parallax/p1.png)">
+
+    <div id="mainPage" style="background-image:url(hp/p1.png)">
     <div class="story">
     <h1 align="center" id="enterHPButton"><a href="#enterInfo" onClick="createHP()">Enter Site</a></h1>
     <h1 align="center" id="viewHPImage"><a href="#intro" onClick="viewHPImage()">View and Share Image</a></h1>
@@ -248,7 +248,7 @@ console.log(word);
     <p align="center">This website is for all the fans of Harry Potter. It allows the user to be a part or gain an ID card to be a part of this magical world. </p>
     <p align="center">Please check the box below to start your creation.</p>
     <!--<p align="center"><input type="text" id="enterWork" placeholder="Enter your Choice of Work" size="50" /></p>-->
-    
+
     <ul id="theFilter">
     	<li><input type="checkbox" id="enterHP" onClick="theChecks()" />Harry Potter</li>
         <!--<li><input type="checkbox" id="enterHG" onClick="theChecks()" />Hunger Games</li>
@@ -260,19 +260,19 @@ console.log(word);
         <li><input type="checkbox" id="enterLOTR" onClick="theChecks()" />Lord of the Rings</li>
         <li><input type="checkbox" id="enterSP" onClick="theChecks()" />The World of Shakespeare</li>-->
     </ul>
-	
+
     </div>
-    
+
     </div>
     </div>
-    
- <!--Harry Potter Page-->   
+
+ <!--Harry Potter Page-->
     <div id="enterInfo">
     <div class="story">
     <div id="theForm">
 <h1 align="center"><u>Create your Own Personalized Wallpapers</u></h1>
-    
-    Enter Name: <input type="text" data-ng-model="searchName" id="headId"/> 
+
+    Enter Name: <input type="text" data-ng-model="searchName" id="headId"/>
     <br />
     <br />
     Birthday: <input type="date" name= "bday" data-ng-model="theBday" />
@@ -286,7 +286,7 @@ console.log(word);
     </select>
     <br />
     <br />
-    <button type="button" id="wand" onClick="theWand()">The wand chooses the wizard</button> 
+    <button type="button" id="wand" onClick="theWand()">The wand chooses the wizard</button>
     <br />
     <br />
     Pet: <select data-ng-model="thePet" id="pet">
@@ -297,7 +297,7 @@ console.log(word);
     </select>
     <br />
     <br />
-    <button type="button" onClick="genPat()">Expecto Patronum!!!</button> 
+    <button type="button" onClick="genPat()">Expecto Patronum!!!</button>
     <br />
     <br />
     Boggart: <input type="text" data-ng-model="theBog">
@@ -321,11 +321,11 @@ console.log(word);
 	</div>
     <div id="hpImplement">
     <h1 align="center">Hogwarts Student Id</h1>
-    <img style="float:left" id="gImg" src="parallax/gm.png" height="500" width="125" />
-        <img style="float:left" id="sImg" src="parallax/sm.png" height="500" width="125" />
-        <img style="float:left" id="rImg" src="parallax/rm.png" height="500" width="125" />
-        <img style="float:left" id="hImg" src="parallax/hm.png" height="500" width="125" />
-        <img style="float:left" id="blah" src="parallax/hpavatar.png" height="200" width="150" {{ theImg }} />
+    <img style="float:left" id="gImg" src="hp/gm.png" height="500" width="125" />
+        <img style="float:left" id="sImg" src="hp/sm.png" height="500" width="125" />
+        <img style="float:left" id="rImg" src="hp/rm.png" height="500" width="125" />
+        <img style="float:left" id="hImg" src="hp/hm.png" height="500" width="125" />
+        <img style="float:left" id="blah" src="hp/hpavatar.png" height="200" width="150" {{ theImg }} />
         <p><b>Name: </b> {{ searchName }} </p>
         <p><b>Birthday: </b> {{ theBday }}</p>
         <p id="addWand"></p>
@@ -337,19 +337,19 @@ console.log(word);
         <p><b>Club: </b> {{ theClub }} </p>
         <p><b>Personal Statement: </b> {{ addQuote }} </p>
         <p><b>Head Of House Signature: </b></p>
-        <p><img id="ssSig" src="parallax/ss.png" height="45" width="350" />
-        <img id="mmSig" src="parallax/mm.png" height="45" width="350" />
-        <img id="ffSig" src="parallax/ff.png" height="45" width="350" />
-        <img id="psSig" src="parallax/ps.png" height="45" width="350" />
+        <p><img id="ssSig" src="hp/ss.png" height="45" width="350" />
+        <img id="mmSig" src="hp/mm.png" height="45" width="350" />
+        <img id="ffSig" src="hp/ff.png" height="45" width="350" />
+        <img id="psSig" src="hp/ps.png" height="45" width="350" />
         </p>
 	</div>
     </div>
     </div>
-    
+
     <div id="intro">
 		<div class="story">
         <div id="hpShare" align="left">
-        </div>	
+        </div>
         <div id="hpWidgets" align="left">
         	<h1>Share Website!</h1>
             <p>To save the image, right click on the image and to make changes to the image click on the arrow icon below and then click Create.</p>
@@ -357,29 +357,29 @@ console.log(word);
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
  <br />
  <br />
- <img src="parallax/facebook.png" height="50" width="50" onClick="openFB()"  />
- 
+ <img src="hp/facebook.png" height="50" width="50" onClick="openFB()"  />
+
  <!--<br />
  <br />
- <img src="parallax/print_icon.jpg" height="50" width="50" onClick="printHP()" id="printHP" />-->
- 
-	<div align="right"><a href="#enterInfo"><img src="parallax/up-arrow-circle-md.png" height="50" width="50" id="navHP" onClick="updateHP()" /></a></div>
+ <img src="hp/print_icon.jpg" height="50" width="50" onClick="printHP()" id="printHP" />-->
+
+	<div align="right"><a href="#enterInfo"><img src="hp/up-arrow-circle-md.png" height="50" width="50" id="navHP" onClick="updateHP()" /></a></div>
         </div>
 	    </div> <!--.story-->
 	</div> <!--#intro-->
-    
+
     <div id="second">
 		<div class="story">
         <h1 align="center"> {{ searchName }} </h1>
         <div class="bg"></div>
 	    	<div class="float-right">
-	            
-	            
+
+
 	        </div>
 	    </div> <!--.story-->
-	    
+
 	</div> <!--#second-->
-    
+
     <div id="third">
 		<div class="story">
         <h1 align="center"> {{ searchName }} </h1>
@@ -389,12 +389,12 @@ console.log(word);
 	        </div>
 	    </div> <!--.story-->
 	</div> <!--#third-->
-    
+
     <div id="fifth">
 		<div class="story">
         <h1 align="center"> {{ searchName }} </h1>
-		    
-            
+
+
              </div> <!--.story-->
 	</div> <!--#fifth-->
 
