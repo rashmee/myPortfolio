@@ -139,10 +139,42 @@
                             <br />
                             The website can be viewed <a href="projects/literary/parallax.html" target="_blank">here</a>.
                     </div>
+                    <div id="dhcPopover" class="hide myPopovers">
+
+                      <h3 align="center"><u>Capstone Senior Project</u></h3>
+
+                      <p class="pAbtMe" align="center">Our Capstone project wanted us to fine a technical solution for a business problem. My group and I worked with <a href="http://distinctivehomecare.com/home.php" target="_blank">Distinctive Home Care</a> on how we can help bettter their business process.</p>
+                      <p align="center">I served as the technical lead while working with Distinctive Home Care (DHC). This project was divided between two semesters. I created Gantt Charts for the <a href="projects/DHC/slides/Gantt Chart- 492.pdf" target="_blank">first semester</a> and the <a href="projects/DHC/slides/Gantt Chart- IT493.pdf" target="_blank">second semester</a> to properly illustrate the work breakdown schedule. During the first semster we were asked to meet with DHC and analyze their business process and develop a complelling business case for change that could be solved using technology.</p>
+                      <p align="center">While analyzing DHC's busniess process, we found that while scheduling appointments for current or potential clients, they had to look through files of paper based records to find a caregiver that matches the requirements of the client. Due the delay in finding the right caregiver, DHC sometimes lost clients and wanted a solution where filtering and scheduling a caregiver is no more such a laborious process.</p>
+                      <p align="center">After carefully analyzing DHC's requirements, we found that it would be best if DHC would purchase <a href="http://wheniwork.com/?utm_expid=82000332-9.au63AZf0Qqy1gDY9-0DuRQ.0" target="_blank">When I Work</a>, a very simple and efficient <a href="#theScheduler">scheduling software</a> that would help simply their daily business process. With the help of this software, DHC would now be able to combine the duties of a receptionist and scheduler and in turn hire someone to help with marketing, which was one of their requirements. Another issue with an easy fix that DHC had was the need of a <a href="#theContactForm">contact form</a> on their website for clients who wanted some basic information via the internet. I suggested an simple <a href="http://distinctivehomecare.com/contact_us.php" target="_blank">PHP contact form</a> would not go amiss and would greatly benefit DHC and their clients. </p>
+                      <p align="center">I helped train the super user at DHC on how to import and export contacts, create a schedule and also troubleshoot problems when working with When I Work. I also created a simple <a href="projects/DHC/slides/userManual.pdf" target="_blank">User manual</a> for their ease along with a short <a href="https://www.youtube.com/watch?v=6hinvlJ6ZYI" target="_blank">video</a> that would give them an idea on how the software would help make things easier and more efficient for them.</p>
+                      <br />
+                      <br />
+                      <figure>
+                      <img class="projImages" src="projects/DHC/slides/asis.png" alt="asis" height="300" width="450">
+                      <figcaption>The As Is Process</figcaption>
+                      </figure>
+                      <br />
+                      <br />
+                       <figure>
+                      <img class="projImages" src="projects/DHC/slides/tobe.png" alt="tobe" height="300" width="450">
+                      <figcaption>The To Be Process</figcaption>
+                      </figure>
+                      <br />
+                      <br />
+                      <figure>
+                      <img class="projImages" src="projects/DHC/slides/Screen Shot 2014-10-28 at 6.27.38 PM.png" alt="scheduler"  height="300" width="450" id="theScheduler">
+                      <figcaption>The Scheduler</figcaption>
+                      </figure>
+                      <figure>
+                      <img class="projImages" src="projects/DHC/slides/Screen Shot 2014-12-08 at 3.43.13 PM.png" alt="form"  height="300" width="450" id="theContactForm">
+                      <figcaption>The PHP contact form</figcaption>
+                      </figure>
+                    </div>
                 </div>
               <div ng-init = "projects = [
               {theProject: 'Literary ID Card', projectImg: 'projects/literary/book.png', projectContent: 'litPopover'},
-              {theProject: 'DHC', projectImg: 'projects/DHC/dhcLogo.png'},
+              {theProject: 'DHC', projectImg: 'projects/DHC/dhcLogo.png', projectContent: 'dhcPopover'},
               {theProject: 'Foodograph', projectImg: 'projects/foodograph/theApp.png'},
               {theProject: 'Harry Potter Course Catalog', projectImg: 'projects/hp/hp2.png'},
               {theProject: 'Discovery Car Dealership', projectImg: 'projects/discovery/discovery.png'},

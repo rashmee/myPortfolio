@@ -114,6 +114,8 @@ body, html {
 
 .popover {
     max-width: 500px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 
 .popover-title {
