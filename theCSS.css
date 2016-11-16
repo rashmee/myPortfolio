@@ -131,6 +131,10 @@ body, html {
     text-align: center;
 }
 
+figcaption {
+    text-align: center;
+}
+
 .projectsCap {
     position: absolute;
     left: 33%;

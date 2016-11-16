@@ -27,7 +27,6 @@
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
 
-
     $(function(){
     $('[rel="popover"]').popover({
         container: '.projectsDiv',
@@ -40,6 +39,18 @@
         e.preventDefault();
     });
 });
+
+$(".projImages").hover(function(){
+    $(this).css({position : 'relative'});
+    $(this).height('300px');
+   	$(this).width('470px');
+},
+    function() {
+        $(this).css({position : 'static'});
+        $(this).height('300px');
+       	$(this).width('450px');
+});
+
 });
 </script>
 
@@ -151,21 +162,20 @@
                       <br />
                       <br />
                       <figure>
-                      <img class="projImages" src="projects/DHC/slides/asis.png" alt="asis" height="300" width="450">
+                      <img class="projImages" src="projects/DHC/slides/asis2.png" alt="asis" id="asis" height="300" width="450">
                       <figcaption>The As Is Process</figcaption>
                       </figure>
-                      <br />
-                      <br />
+                      <br /><br />
                        <figure>
-                      <img class="projImages" src="projects/DHC/slides/tobe.png" alt="tobe" height="300" width="450">
+                      <img class="projImages" src="projects/DHC/slides/tobe2.png" alt="tobe" id="tobe" height="300" width="450">
                       <figcaption>The To Be Process</figcaption>
                       </figure>
-                      <br />
-                      <br />
+                      <br /><br />
                       <figure>
                       <img class="projImages" src="projects/DHC/slides/Screen Shot 2014-10-28 at 6.27.38 PM.png" alt="scheduler"  height="300" width="450" id="theScheduler">
                       <figcaption>The Scheduler</figcaption>
                       </figure>
+                      <br /><br />
                       <figure>
                       <img class="projImages" src="projects/DHC/slides/Screen Shot 2014-12-08 at 3.43.13 PM.png" alt="form"  height="300" width="450" id="theContactForm">
                       <figcaption>The PHP contact form</figcaption>
