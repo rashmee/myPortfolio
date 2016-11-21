@@ -235,3 +235,9 @@ figcaption {
   font-family: 'Architects Daughter', cursive;
   color: #111;
 }
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
