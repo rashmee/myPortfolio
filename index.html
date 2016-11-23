@@ -19,6 +19,8 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<link href="lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css" href="theCSS.css"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -200,7 +202,7 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
-                            <ol class="carousel-indicators">
+                            <!-- <ol class="carousel-indicators">
                                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                 <li data-target="#myCarousel" data-slide-to="1"></li>
                                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -209,64 +211,64 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
                                 <li data-target="#myCarousel" data-slide-to="5"></li>
                                 <li data-target="#myCarousel" data-slide-to="6"></li>
                                 <li data-target="#myCarousel" data-slide-to="7"></li>
-                            </ol>
+                            </ol> -->
 
                             <!-- Wrapper for slides -->
                             <div id="theCarousel" class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <img src="projects/foodograph/appicon.png" alt="appIcon" width="375" height="250">
-                                    <div class="carousel-caption">
+                                    <!-- <div class="carousel-caption">
                                         <h3>App Icon</h3>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/launchscreen.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Launch Screen</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/register.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Register</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/home.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Home Page</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/loadpic.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Upload Image</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/ratepic.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Like or Pass</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/share.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>Share on Social Network</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                                 <div class="item">
                                   <img src="projects/foodograph/stats.png" alt="appIcon" width="375" height="250">
-                                  <div class="carousel-caption">
+                                  <!-- <div class="carousel-caption">
                                     <h3>View Stats</h3>
-                                  </div>
+                                  </div> -->
                                 </div>
 
                             </div>
@@ -289,13 +291,27 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
                         </div>
 
                     </div>
+
+                    <div id="discPopover" class="hide myPopovers">
+                        <h3 align="center"><u>Discovery Car Dealership</u></h3>
+
+                        <p class="pAbtMe" align="center">Discovery is database system that has been designed for car dealerships. I have used MySQL for this website. The user can query between used and new cars, they can query, the manufacturer, the color, features. </p>
+                        <p align="center">I have used MS Visio to draw a Entity Relationship Diagram: </p>
+                        <br />
+                        <img class="erdImg" src="projects/discovery/ERD.png" alt="theERD" height="470" width="490">
+                        <br />
+                        <br />
+                        <p align="center">This <a href="projects/discovery/Project Part 2.pdf" target="_blank">file</a> shows the database was created, populated and queried.</p>
+                        <p align="center"><object height="470" width="490" data="projects/discovery/Project Part 2.pdf"></object></p>
+                        <iframe src="projects/discovery/Project Part 2.pdf" height="470" width="490" scrolling="no" frameborder="0"></iframe>
+                    </div>
                 </div>
               <div ng-init = "projects = [
               {theProject: 'Literary ID Card', projectImg: 'projects/literary/book.png', projectContent: 'litPopover', projectClass: 'litClass'},
               {theProject: 'DHC', projectImg: 'projects/DHC/dhcLogo.png', projectContent: 'dhcPopover', projectClass: 'dhcClass'},
               {theProject: 'Foodograph', projectImg: 'projects/foodograph/theApp.png', projectContent:'foodPopover', projectClass: 'foodClass'},
               {theProject: 'Harry Potter Course Catalog', projectImg: 'projects/hp/hp2.png'},
-              {theProject: 'Discovery Car Dealership', projectImg: 'projects/discovery/discovery.png'},
+              {theProject: 'Discovery Car Dealership', projectImg: 'projects/discovery/discovery.png', projectContent:'discPopover', projectClass:'discClass'},
               {theProject: 'Horseman Gather Stables', projectImg: 'projects/horse/horse.png'},
               {theProject: 'Reed Moore Library', projectImg: 'projects/library/books.png'},
               {theProject: 'Guest Book', projectImg: 'projects/php/gBook.png'},
@@ -319,5 +335,6 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
   </div>
 </div>
 
+<script src="lightbox2-master/src/js/lightbox.js"></script>
 </body>
 </html>
