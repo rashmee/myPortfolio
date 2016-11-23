@@ -59,7 +59,14 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
     interval: 3000
   });
 });
-
+//discoveryOne
+// $('.discoveryOne').lightBox({
+//       'maxWidth': 700,
+//       'maxHeight': 700
+//   });
+$(".lb-image").removeAttr("style");
+$(".lb-image").attr("width","700");
+$(".lb-image").attr("height","700");
 });
 </script>
 
@@ -298,7 +305,8 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
                         <p class="pAbtMe" align="center">Discovery is database system that has been designed for car dealerships. I have used MySQL for this website. The user can query between used and new cars, they can query, the manufacturer, the color, features. </p>
                         <p align="center">I have used MS Visio to draw a Entity Relationship Diagram: </p>
                         <br />
-                        <img class="erdImg" src="projects/discovery/ERD.png" alt="theERD" height="470" width="490">
+                        <a href="projects/discovery/ERD.png" data-lightbox="ERD" class="discoveryOne"><img  src="projects/discovery/ERD.png" alt="theERD" height="470" width="490" /></a>
+                        <!-- <img class="erdImg" src="projects/discovery/ERD.png" data-lightbox="ERD" alt="theERD" height="470" width="490"> -->
                         <br />
                         <br />
                         <p align="center">This <a href="projects/discovery/Project Part 2.pdf" target="_blank">file</a> shows the database was created, populated and queried.</p>
