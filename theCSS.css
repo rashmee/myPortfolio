@@ -250,3 +250,7 @@ figcaption {
 .item img {
     min-height: 450px;
 }
+
+.horseCaps {
+    text-align: center;
+}

@@ -28,6 +28,10 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
+        $('.discoveryOne').click(function() {
+            $(".lb-image").removeAttr("style");
+            // $('.lb-number').text(" ");
+        });
 
     $(function(){
     $('[rel="popover"]').popover({
@@ -64,9 +68,9 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 //       'maxWidth': 700,
 //       'maxHeight': 700
 //   });
-$(".lb-image").removeAttr("style");
-$(".lb-image").attr("width","700");
-$(".lb-image").attr("height","700");
+// $(".lb-image").removeAttr("style");
+// $(".lb-image").attr("width","700");
+// $(".lb-image").attr("height","700");
 });
 </script>
 
@@ -305,14 +309,89 @@ $(".lb-image").attr("height","700");
                         <p class="pAbtMe" align="center">Discovery is database system that has been designed for car dealerships. I have used MySQL for this website. The user can query between used and new cars, they can query, the manufacturer, the color, features. </p>
                         <p align="center">I have used MS Visio to draw a Entity Relationship Diagram: </p>
                         <br />
-                        <a href="projects/discovery/ERD.png" data-lightbox="ERD" class="discoveryOne"><img  src="projects/discovery/ERD.png" alt="theERD" height="470" width="490" /></a>
-                        <!-- <img class="erdImg" src="projects/discovery/ERD.png" data-lightbox="ERD" alt="theERD" height="470" width="490"> -->
+                        <div>
+                          <a class="example-image-link" href="projects/discovery/ERD2.png" data-lightbox="example-set"><img class="example-image" src="projects/discovery/ERD.png" alt="" width="475" height="470" /></a>
+                        </div>
+                        <!-- <a class="discoveryOne" href="projects/discovery/ERD2.png" data-lightbox="example-1"><img class="example-image" src="projects/discovery/ERD.png" alt="theERD" width="475" height="470" /></a> -->
                         <br />
                         <br />
                         <p align="center">This <a href="projects/discovery/Project Part 2.pdf" target="_blank">file</a> shows the database was created, populated and queried.</p>
-                        <p align="center"><object height="470" width="490" data="projects/discovery/Project Part 2.pdf"></object></p>
-                        <iframe src="projects/discovery/Project Part 2.pdf" height="470" width="490" scrolling="no" frameborder="0"></iframe>
+                        <p align="center"><object height="470" width="473" data="projects/discovery/Project Part 2.pdf"></object></p>
+                        <iframe src="projects/discovery/Project Part 2.pdf" height="470" width="473" scrolling="no" frameborder="0"></iframe>
                     </div>
+
+                    <div id="horsePopover" class="hide myPopovers">
+                        <h3 align="center"><u>Horseman's Gather Stables</u></h3>
+
+                        <p align="center">Horseman's Gather Stables is a fictional website created using HTML, CSS, ASP.NET and LINQ. This website was used to mainly showcase my use and knowledge of ASP.Net. I used Visual Studio to create my project. I used HTML and CSS as my front end and MySQL as the backend for this project.</p>
+                        <p align="center">Horseman's Gather Stables allows the user to add, modify and delete a new rider. This form also allows the user to add their contact information, their competency as a rider, view upcoming event and finally it allows the administrator to filter through the roster.</p>
+
+                        <br />
+                        <br />
+                        <div>
+                          <a class="example-image-link" href="projects/horse/homepage.png" data-lightbox="example-set" data-title="Home Page"><img class="horseImages" src="projects/horse/homepage.png" width="475" height="350" alt="homepage"/></a>
+                          <br />
+                          <p class=horseCaps>Home Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/horse/about.png" data-lightbox="example-set" data-title="About the Website"><img class="horseImages" src="projects/horse/about.png" width="475" height="350" alt="about"/></a>
+                          <br />
+                          <p class=horseCaps>About the Website</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/horse/register.png" data-lightbox="example-set" data-title="Registration Page"><img class="horseImages" src="projects/horse/register.png" width="475" height="350" alt="register"/></a>
+                          <br />
+                          <p class=horseCaps>Registration Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/horse/adminlogin.png" data-lightbox="example-set" data-title="Admin Login"><img class="horseImages" src="projects/horse/adminlogin.png" width="475" height="350" alt="adminLogin"/></a>
+                          <br />
+                          <p class=horseCaps>Admin Login</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/horse/events.png" data-lightbox="example-set" data-title="Events Page"><img class="horseImages" src="projects/horse/events.png" width="475" height="350" alt="events"/></a>
+                          <br />
+                          <p class=horseCaps>Events Page</p>
+                          <br /><br />
+                        </div>
+                    </div>
+
+                    <div id="libPopover" class="hide myPopovers">
+                        <h3 align="center"><u>Reed Moore Library</u></h3>
+
+                        <p align="center">Reed Moore Library is a fictional website created using HTML, CSS, JavaScript ASP.NET and LINQ. This website was used to mainly showcase my use and knowledge of ASP.Net. I used Visual Studio to create my project. I used HTML and CSS as my front end and MySQL as the backend for this project.</p>
+                        <p align="center">Reed Moore allows the user to add, modify and delete a new rider. This form also allows the user to add their contact information, their competency as a rider, view upcoming event and finally it allows the administrator to filter through the roster.</p>
+
+                        <br />
+                        <br />
+                        <div>
+                          <a class="example-image-link" href="projects/library/libHomepage.png" data-lightbox="example-set" data-title="Home Page"><img class="horseImages" src="projects/library/libHomepage.png" width="475" height="350" alt="libHomepage"/></a>
+                          <br />
+                          <p class=horseCaps>Home Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libUserReg.png" data-lightbox="example-set" data-title="User Registration Page"><img class="horseImages" src="projects/library/libUserReg.png" width="475" height="350" alt="libUserReg"/></a>
+                          <br />
+                          <p class=horseCaps>User Registration Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libCheckout.png" data-lightbox="example-set" data-title="Book Checkout Page"><img class="horseImages" src="projects/library/libCheckout.png" width="475" height="350" alt="libCheckout"/></a>
+                          <br />
+                          <p class=horseCaps>Book Checkout Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libCheckout2.png" data-lightbox="example-set" data-title="Successful Checkout"><img class="horseImages" src="projects/library/libCheckout2.png" width="475" height="350" alt="libSuccessfulCheckout"/></a>
+                          <br />
+                          <p class=horseCaps>Successful Checkout</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libAdminLogin.png" data-lightbox="example-set" data-title="Admin Login Page"><img class="horseImages" src="projects/library/libAdminLogin.png" width="475" height="350" alt="libAdminLogin"/></a>
+                          <br />
+                          <p class=horseCaps>Admin Login Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libAdminReg.png" data-lightbox="example-set" data-title="Admin Registration, Modify and Delete Page"><img class="horseImages" src="projects/library/libAdminReg.png" width="475" height="350" alt="libAdminRegistration"/></a>
+                          <br />
+                          <p class=horseCaps>Admin Registration, Modify and Delete Page</p>
+                          <br /><br />
+                          <a class="example-image-link" href="projects/library/libRoster.png" data-lightbox="example-set" data-title="Roster of registered users"><img class="horseImages" src="projects/library/libRoster.png" width="475" height="350" alt="libRoster"/></a>
+                          <br />
+                          <p class=horseCaps>Roster of registered users</p>
+                          <br /><br />
+                        </div>
+                    </div>
+
                 </div>
               <div ng-init = "projects = [
               {theProject: 'Literary ID Card', projectImg: 'projects/literary/book.png', projectContent: 'litPopover', projectClass: 'litClass'},
@@ -320,8 +399,8 @@ $(".lb-image").attr("height","700");
               {theProject: 'Foodograph', projectImg: 'projects/foodograph/theApp.png', projectContent:'foodPopover', projectClass: 'foodClass'},
               {theProject: 'Harry Potter Course Catalog', projectImg: 'projects/hp/hp2.png'},
               {theProject: 'Discovery Car Dealership', projectImg: 'projects/discovery/discovery.png', projectContent:'discPopover', projectClass:'discClass'},
-              {theProject: 'Horseman Gather Stables', projectImg: 'projects/horse/horse.png'},
-              {theProject: 'Reed Moore Library', projectImg: 'projects/library/books.png'},
+              {theProject: 'Horseman Gather Stables', projectImg: 'projects/horse/horse.png', projectContent:'horsePopover', projectClass: 'horseClass'},
+              {theProject: 'Reed Moore Library', projectImg: 'projects/library/books.png', projectContent:'libPopover', projectClass:'libClass'},
               {theProject: 'Guest Book', projectImg: 'projects/php/gBook.png'},
               {theProject: 'Life Expectancy of Females and Males', projectImg: 'projects/tableau/tableau.png'},
               {theProject: 'Stop Domestic Violence', projectImg: 'projects/stopDV/DVlogo.png'},
