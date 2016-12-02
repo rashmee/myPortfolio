@@ -218,6 +218,10 @@ figcaption {
     font-size: 25px;
 }
 
+.skillList {
+    min-height: 85%;
+}
+
 .skillList .list-group {
     height: 467px;
     overflow: auto;
