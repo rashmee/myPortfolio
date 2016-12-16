@@ -39,3 +39,7 @@ body {
     background-color: #f5ead8;
     color: #000;
 }
+
+#newEntry {
+    padding-right: 175px;
+}
