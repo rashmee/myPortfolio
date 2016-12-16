@@ -10,7 +10,7 @@ a {
         color: red;
 }*/
 
-body {
+#addFormBody {
     background-image: url("addForm.png");
     background-size: cover;
     background-repeat:   no-repeat;
@@ -60,4 +60,9 @@ body {
     cursor: pointer;
     font-size: 25px;
     font-family: 'Mirza', cursive;
+}
+
+.teleTable a {
+    font-size: 21px;
+    font-family: 'Cormorant Infant', serif;
 }

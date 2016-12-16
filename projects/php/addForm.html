@@ -6,11 +6,11 @@
 
 <head>
     <title> Telephone Directory </title>
-    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Mirza" rel="stylesheet">
     <link rel="stylesheet" href="LA8.css" type="text/css" />
 </head>
 
-<body>
+<body id="addFormBody">
 <div id="addForm">
 
     <!-- <h1 align="center">Telephone Directory</h1> -->
@@ -105,13 +105,17 @@
             <td align="left">Phone Number: </td>
             <td><input type="text" class="teles" name="phNum" placeholder="Phone Number" /></td>
         </tr>
-        <tr><td colspan="4" align="right" id="addEntry"> </td></tr>
-        <tr><td colspan="4" align="right" id="addEntry"><input type="submit" value="Add Entry!" class="addEntryButton" /></td></tr>
+        <tr><td colspan="4" align="right"> </td></tr>
+        <tr>
+            <td colspan="4" align="right" id="addEntry"><br /><input type="submit" value="Add Entry!" class="addEntryButton" />
+            </td>
+        </tr>
+        <tr><td colspan="4" align="right"> </td></tr>
+        <tr><td colspan="4" align="right"><a href ="directory.html"><br />Return to Directory</a></td></tr>
     </table>
 
 </form>
-<br />
-<p align="center"><a href ="directory.html"> Return to Directory</a></p>
+
 </div>
 </body>
 </html>
