@@ -10,6 +10,29 @@ a {
         color: red;
 }*/
 
+body {
+    background-image: url("addForm.png");
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
 #addForm {
     margin: 0 auto;
+}
+
+.teleTable {
+    font-size: 30px;
+    font-family: 'Mirza', cursive;
+}
+
+.teles {
+    font-size: 30px;
+    font-family: 'Mirza', cursive;
+
+}
+
+.teleState {
+    font-size: 30px;
+    font-family: 'Mirza', cursive;
 }

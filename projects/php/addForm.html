@@ -6,6 +6,7 @@
 
 <head>
     <title> Telephone Directory </title>
+    <link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
     <link rel="stylesheet" href="LA8.css" type="text/css" />
 </head>
 
@@ -21,26 +22,26 @@
    <h2 align="center">New Entry</h2>
 
 <form name="myForm" method="post" action="addForm.php" align="center">
-    <table align="center">
+    <table align="center" class="teleTable">
         <tr>
             <td align="left">First Name: </td>
-            <td><input type="text" name="fName" placeholder="First Name" /></td>
+            <td><input type="text" class="teles" name="fName" placeholder="First Name" /></td>
         </tr>
         <tr>
             <td align="left">Last Name: </td>
-            <td><input type="text" name="lName" placeholder="Last Name" /></td>
+            <td><input type="text" class="teles" name="lName" placeholder="Last Name" /></td>
         </tr>
         <tr>
             <td align="left">Address: </td>
-            <td><input type="text" name="address" placeholder="Address" /></td>
+            <td><input type="text" class="teles" name="address" placeholder="Address" /></td>
         </tr>
         <tr>
             <td align="left">City: </td>
-            <td><input type="text" name="city" placeholder="City" /></td>
+            <td><input type="text" class="teles" name="city" placeholder="City" /></td>
         </tr>
         <tr>
             <td align="left">State: </td>
-            <td><select name="State">
+            <td align="left"><select name="State" class="teleState">
                 <option value="" disabled selected> -State-</option>
                 <option value="AL">Alabama</option>
         	    <option value="AK">Alaska</option>
@@ -97,11 +98,11 @@
         </tr>
         <tr>
             <td align="left">Zip: </td>
-            <td><input type="text" name="zip" placeholder="Zip Code" /></td>
+            <td><input type="text" class="teles" name="zip" placeholder="Zip Code" /></td>
         </tr>
         <tr>
             <td align="left">Phone Number: </td>
-            <td><input type="text" name="phNum" placeholder="Phone Number" /></td>
+            <td><input type="text" class="teles" name="phNum" placeholder="Phone Number" /></td>
         </tr>
     </table>
     <!-- First Name: <input type="text" name="fName" placeholder="First Name" >
