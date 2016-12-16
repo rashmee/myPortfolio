@@ -29,10 +29,13 @@ body {
 .teles {
     font-size: 30px;
     font-family: 'Mirza', cursive;
-
+    background-color: #f5ead8;
+    color: #000;
 }
 
 .teleState {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Mirza', cursive;
+    background-color: #f5ead8;
+    color: #000;
 }
