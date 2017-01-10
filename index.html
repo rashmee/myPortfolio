@@ -316,7 +316,7 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 
                         <p align="center">The documentation for the website can be viewed here:</p>
 
-                        <p align="center"><iframe src="projects/hp/HP/Hogwarts-Documentation.pdf" width="625" height="625" scrolling="no" frameborder="0"></iframe></p>
+                        <p align="center"><iframe src="projects/hp/HP/Hogwarts-Documentation.pdf" height="470" width="473" scrolling="no" frameborder="0"></iframe></p>
                     </div>
 
                     <div id="discPopover" class="hide myPopovers">
@@ -417,6 +417,43 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
                         </p>
                     </div>
 
+                    <div id="tabPopover" class="hide myPopovers">
+                        <h3 align="center"><u>Tableau</u></h3>
+
+                        <p align="center">Using <a href="https://public.tableausoftware.com" target="_blank">Tableau</a>, I created interactive visualizations to show the Life Expectancy of Females and Males from 2003-2012. I downloaded the data from the <a href="http://data.worldbank.org/topic" target="_blank">World Bank</a> website. I downloaded the data onto a <a href="projects/tableau/Tableau/rawData.xls" target="_blank">MS Excel Spreadsheet</a> and then I used that data to create interactive data charts.</p>
+                        <p>
+                            This Tableau project can be viewed by clicking on this <a href="projects/tableau/tableau.html" target="_blank">link</a>.
+                        </p>
+                    </div>
+
+                    <div id="dvPopover" class="hide myPopovers">
+                        <h3 align="center"><u>STOP Domestic Violence</u></h3>
+
+                        <p align="center" class="pAbtMe">This is a fictional website made for a non-profit website against Domestic Violence. This is such a serious problem that needs addressing and action. This was a website created to raise awareness and educate users about the issue.</p>
+
+                        <p align="center">This fictional website was created using HTML, CSS, Adobe Flash, Adobe Photoshop and Adobe Dreamweaver.</p>
+
+                        <p align="center">The website can be viewed <a href="projects/stopDV/dv/index.html" target="_blank">here</a>.</p>
+
+                        <p align="center">The storyboards for the website can be viewed here:</p>
+
+                        <p align="center"><iframe src="projects/stopDV/dv/Revised Storyboards.pdf" height="470" width="473" scrolling="no" frameborder="0"></iframe></p>
+                    </div>
+
+                    <div id="tlPopover" class="hide myPopovers">
+                        <h3 align="center"><u>Timor Leste</u></h3>
+
+                        <p align="center" class="pAbtMe">This is a  website made on the country Timor Leste. This website gives a detailed description of its rich history, geography, government and economy, people. It also talks about its tourism, health issues and education system.</p>
+
+                        <p align="center">This website was created using HTML and CSS.</p>
+
+                        <p align="center">The website can be viewed <a href="projects/timorLeste/Timor Leste/index1.html" target="_blank">here</a>.</p>
+
+                        <p align="center">The paper for the website can be viewed here:</p>
+
+                        <p align="center"><iframe src="projects/timorLeste/Timor Leste/Research Paper.pdf" height="470" width="473" scrolling="no" frameborder="0"></iframe></p>
+                    </div>
+
                 </div>
               <div ng-init = "projects = [
               {theProject: 'Literary ID Card', projectImg: 'projects/literary/book.png', projectContent: 'litPopover', projectClass: 'litClass'},
@@ -427,9 +464,9 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
               {theProject: 'Horseman Gather Stables', projectImg: 'projects/horse/horse.png', projectContent:'horsePopover', projectClass: 'horseClass'},
               {theProject: 'Reed Moore Library', projectImg: 'projects/library/books.png', projectContent:'libPopover', projectClass:'libClass'},
               {theProject: 'Guest Book', projectImg: 'projects/php/gBook.png', projectContent:'phpPopover', projectClass:'phpClass'},
-              {theProject: 'Life Expectancy of Females and Males', projectImg: 'projects/tableau/tableau.png'},
-              {theProject: 'Stop Domestic Violence', projectImg: 'projects/stopDV/DVlogo.png'},
-              {theProject: 'Website on the Country Timor Leste', projectImg: 'projects/timorLeste/tL.png'}
+              {theProject: 'Life Expectancy of Females and Males', projectImg: 'projects/tableau/tableau.png', projectContent:'tabPopover', projectClass:'tabClass'},
+              {theProject: 'Stop Domestic Violence', projectImg: 'projects/stopDV/DVlogo.png', projectContent:'dvPopover', projectClass:'dvClass'},
+              {theProject: 'Website on the Country Timor Leste', projectImg: 'projects/timorLeste/tL.png', projectContent:'tlPopover', projectClass:'tlClass'},
               ]">
               </div>
               <ul class="list-group">
