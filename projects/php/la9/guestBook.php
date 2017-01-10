@@ -7,6 +7,13 @@
 
 <head>
 <title> Guest Book  </title>
+
+<style>
+a {
+	    color: #42C0FB;
+}
+</style>
+
 </head>
 
 <body>
@@ -44,7 +51,7 @@ for ($i=0; $i<count($dataFound); $i++)
     $index=$i+1;
     echo "<tr> <th width='50' rowspan='2'>$index </th>";
     echo "<td>Name: " .$currentContact[0]."</td></tr>";
-    echo "<tr><td>Email: " .$currentContact[1]."</td></tr>";
+    echo "<tr><td>Email: <a href='mailto:".$currentContact[1]."?Subject=Hello%20again'  target='_top'> " .$currentContact[1]."</a></td></tr>";
  }
 ?>
 
