@@ -10,7 +10,7 @@
 </head>
 
 <body>
- 
+
 <hr />
 
 <?php
@@ -23,7 +23,7 @@ if(empty($_POST['fName']) && (empty($_POST['lName']))){
   $x = "You must enter a value in each field. Click your browser's back button to return to the form.  \n <br>" ;
   $setCode="1";
   echo $x;
-} 
+}
 
 
 if(empty($_POST['fName'])){
@@ -78,8 +78,8 @@ for ($i=0; $i<count($data); $i++) {
       $zip = $currentContact[5];
       $phNum = $currentContact[6];
       $found = true;
-                        
-} 
+
+}
 }
 
 $stateName=array($state);
@@ -88,17 +88,18 @@ $stateName=array($state);
 
 <form method="post" action="addForm.php">
 
-First Name: <input type="text" name="fName" value="<?php echo $fName; 
+First Name: <input type="text" name="fName" value="<?php echo $fName;
 ?>">
-Last Name: <input type="text" name="lName" value="<?php echo $lName; 
+Last Name: <input type="text" name="lName" value="<?php echo $lName;
 ?>"> <br><br>
-Address: <input type="text" name="address" value="<?php echo $address; 
+Address: <input type="text" name="address" value="<?php echo $address;
 ?>">
-City: <input type="text" name="city" value="<?php echo $city; 
+City: <input type="text" name="city" value="<?php echo $city;
 ?>"> <br><br>
 State: <select name="state">
 <?php
-$states=array("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID","IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN" ,"TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY");
+$states=array("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS",
+"MO", "MT", "NE", "NV", "NH", "NJ", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN" ,"TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY");
 foreach($states as $st){
 echo '<option value = "'.$st .'"';
   if (in_array($st , $stateName)) {
@@ -110,9 +111,9 @@ echo ">".$st."</option>";
 
 ?>
 </select>
-Zip: <input type="text" name="zip" value="<?php echo $zip; 
+Zip: <input type="text" name="zip" value="<?php echo $zip;
 ?>"> <br><br>
-Phone Number: <input type="text" name="phNum" value="<?php echo $phNum; 
+Phone Number: <input type="text" name="phNum" value="<?php echo $phNum;
 ?>"> <br><br>
 
 <input type="submit" value="Update!">
@@ -125,4 +126,3 @@ Phone Number: <input type="text" name="phNum" value="<?php echo $phNum;
 
 </body>
 </html>
-    
