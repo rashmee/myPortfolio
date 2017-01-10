@@ -1,0 +1,17 @@
+
+body {
+        font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        background-color: #000;
+        color: #8F5E99;
+}
+h1 h2{
+        color: #0BB5FF;
+}
+a {
+        color: #FFFF7E;
+}
+table {
+    table, td, th
+{
+border:1px solid #24D330;
+}
