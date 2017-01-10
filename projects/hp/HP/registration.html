@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registration</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.autocomplete.min.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.menu.min.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css" />
+<link href="jQueryAssets/jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css" />
+<script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.autocomplete.custom.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.button.custom.min.js" type="text/javascript"></script>
+<script src="form-validator/jquery.form-validator.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.27/jquery.form-validator.min.js"></script>
+<script src="jQueryAssets/jquery-ui-1.9.2.datepicker.custom.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+</head>
+
+<body id="reg">
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div class="containerreg">
+  <div class="headerreg">
+  <h1 id="idreg"> <img alt="parchment" class="free1" src="reg.jpg"  />Registration <img alt="parchment" class="free1" src="reg.jpg"  /> </h1>
+
+  <!-- end .header --></div>
+  <div class="contentreg">
+    <h1 id="headreg">Registration form for course selection </h1>
+    <form name="myForm" method="get" action="indexx.html"> 
+    <fieldset id="regF">
+    <legend> Fill out this form... </legend>
+    <p>Name:
+  <input type="text" id="autoname" />
+     </p>
+     <p> 
+  <label>E-Mail Address:
+    <input name="email_address" type="email" id="email_address" size="32" data-validation= "required"/>
+  </label>
+</p>
+      <p>
+ <label>User Name:
+   <input name="username" type="text" id="username" size="38" data-validation="length alphanumeric"data-validation-length="1-10" data-validation-error-msg= "no special characters"/>
+ </label>
+</p>
+      <p>
+ <label>Password:
+   <input name="pass_confirmation" type="password" id="pass_confirmation" size="38" data-validation="strength" data-validation-strength="2"/>
+ </label>
+</p>
+<p>
+ <label>Repeat Password:
+   <input name="pass" type="password" id="pass" size="38" data-validation="confirmation"/>
+ </label>
+</p>
+<p>
+      Birthday: 
+        <input type="text" id="bday" />
+</p>
+     <p> 
+    <div id="RadioButtons1">
+     Sex:  <br /><input type="radio" name="Radio1" id="Radio1" />
+      <label for="Radio1">Witch</label><br />
+       <input type="radio" name="Radio1" id="Radio2" />
+      <label for="Radio2"> Wizard</label>
+</div>
+    
+  </p>
+  <p>
+  <label>Country:
+    <input name= "country" type="text" id="country" data_validation="country"/>
+   </label>
+  </p>
+    <p class="sreg"> What are the activities you enjoy: </p>
+    <div id="Checkboxes1">
+      <input name="Checkbox1" type="checkbox" id="Checkbox1" />
+      <label for="Checkbox1">I enjoy solving mysteries and staying outdoors</label><br />
+      <input type="checkbox" name="Checkbox2" id="Checkbox2" />
+      <label for="Checkbox2">I enjoying studying and mugging up every book in the library.</label><br />
+      <input type="checkbox" name="Checkbox3" id="Checkbox3" />
+      <label for="Checkbox3">I live and breathe sports</label><br />
+      <input type="checkbox" name="Checkbox4" id="Checkbox4" />
+      <label for="Checkbox4">I enjoy my time working with nature</label>
+    </div>
+    <p>Describe your first ever magical experience?</p>
+<p>
+   <label>
+    <textarea name="comment" cols="45" rows="6" id="comment"></textarea><span id="maxlength">150</span> characters left
+   </label>
+</p>
+    <button id="Button1" onclick="">Register!</button>
+    </fieldset>
+    </form>
+     
+    <!-- end .content --></div>
+  <div class="footer">
+    <p id="foot1"><em>This website is developed as an educational project.</em></p>
+    <p id="foot2">Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+<!-- end .container --></div>
+<script type="text/javascript">
+//function to set datepicker
+$(function() {
+	$( "#bday" ).datepicker({
+		changeMonth:true,
+		changeYear:true,
+		yearRange: '1950:2050' //set year range
+	}); 
+});//end datepicker function
+
+//function for autocomplete
+$(function() {
+	$( "#autoname" ).autocomplete(); 
+});//end function for autocomplete
+
+//function for checkboxes
+$(function() {
+	$( "#Checkboxes1" ).buttonset(); 
+});//end checkboxes function
+
+//function for register button
+$(function() {
+	$( "#Button1" ).button(); 
+});//end button function
+
+//function for radio button
+$(function() {
+	$( "#RadioButtons1" ).buttonset(); 
+});//end radio button function
+</script>
+<script>
+//validating the password and setting up country finder
+$.validate({
+    modules : 'security, location', 
+	onModulesLoaded : function() {
+		$('input[name="pass_confirmation"]').displayPasswordStrength(); //this will check how strong the password is
+		$('input[name="country"]').suggestCountry(); //this will display list of countries
+	}//password strength
+ });//end function
+ 
+ //setting up text area
+$('#comment').restrictLength($('#maxlength'));
+
+</script>
+</body>
+</html>

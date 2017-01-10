@@ -1,0 +1,562 @@
+#reg {
+	background-color: #95004B;
+	margin:0;
+	padding:0;	
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Bigelow+Rules);
+.headerreg {
+	font-family: Lucida Console;
+	text-align:center;
+	color:#000;
+	border-bottom: thin inset;
+	text-decoration:underline;
+	background-color:#fff;
+}
+	
+#headreg {
+   font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #fff;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+form {
+	font-family: 'Happy Monkey', cursive;
+	color: #fff;
+	text-align: center;
+	width: auto;
+	height: auto;
+	font-size: 17px;
+}
+#regF {
+	color:#fff;
+}
+legend {
+	text-align:left;
+	color:#0CF;
+}
+
+.sreg {
+	text-align:center;
+	font-size:20px;
+}
+.footer {
+   bottom:0;
+   width:100%;
+   height:80px;
+   border-top:double;
+   background-color: #000;
+   color: #CCC;
+   position:relative;
+   clear:both;
+}
+
+#foot2 {
+	color: #FFF;
+	font-style:italic;
+	font-size:9px;
+	text-align:right;
+}
+
+#cssbody {
+	margin:0;
+	padding:0;
+}
+
+.csscontainer {
+	height:100%;
+	width: 100%;
+	margin: 0 auto;
+	background-image:url(hpbg.png);
+}
+
+.cssheader {
+	background-color: #00005C;
+	top:0;
+	
+	width:100%;
+}
+@import url(http://fonts.googleapis.com/css?family=Life+Savers:400,700);
+#cssh1head {
+	color:#00CCFF;
+	text-align:center;
+	text-decoration:underline;
+	font-family: 'Life Savers', cursive;
+	text-shadow: 5px 5px 10px #00CCFF;
+}
+
+.sidebar1 {
+	float:left;
+	width:180px;
+	padding: 5px;
+	background-color:#CCCCFF;
+	border:thin solid #fff;
+}
+
+ul.nav {
+	list-style:none;
+	border-top: 1px ridge #CC99FF;
+	margin-bottom:15px;
+}
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+ul.nav li {
+	border-bottom: 1px ridge #CC99FF;
+	font-family: 'Voltaire', sans-serif;
+	
+	
+}
+
+ul.nav a:visited, ul.nav a:active, ul.nav a:focus {
+	padding: 5px 5px 5px 15px;
+	display: block; 
+	width: 160px;  
+	text-decoration: none;
+	background-color: #CCCCFF;
+	color: #fff;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
+	background-color: #666680;
+	color: #EBD6FF;
+}
+
+.csscontent {
+	padding: 10px 10px 10px 10px;
+	width: 780px;
+	float:left;
+	color:#fff;
+	font-family:"Courier New", Courier, monospace;
+}
+
+.csscontent ul, .csscontent ol { 
+	padding: 0 15px 15px 40px; 
+}
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+@import url(http://fonts.googleapis.com/css?family=Ribeye);
+#cssh1 {
+	font-family: 'Ribeye', cursive;
+	color:#FFCCCC;
+}
+
+.cssh2 {
+	font-family: 'Ribeye', cursive;
+	color:#FFCCCC;
+}
+
+.cssh3 {
+	font-family: 'Ribeye', cursive;
+	color:#FFCCCC;
+}	
+
+#.cssh3id
+{
+	font-family: 'Ribeye', cursive;
+	color:#FFCCCC;
+	text-decoration:underline;
+}
+
+p.csspcont {
+	color:#FFF;
+	font-family:"Courier New", Courier, monospace;
+}
+
+#aletter{
+	border: medium inset #FFF;
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+	padding: 25px 50 px;
+}
+
+#hpuniform {
+	border: medium inset #FFF;
+	width: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+	padding: 25px 50 px;
+}
+
+.profpic {
+	border: medium ridge #FFF;
+	width: 150px;
+	height: 150px;
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+	padding: 25px 50 px;
+	box-shadow:#F00;
+	border-radius: 10px;
+}
+.anipic {
+	border:medium solid red;
+	width: 50px;
+	height: 50px;
+	
+}
+.free1 {
+	border: thin ridge #FFF;
+	width: 25px;
+	height: 25px;
+	 
+}
+.cssa {
+	color: #96BFE8;
+}
+
+a.cssa:hover {
+	color: #FF99FF;
+	text-decoration:underline;
+}
+
+#cssol1 {
+	color:#fff;
+}
+
+#classescss {
+	color:#fff;
+}
+
+.licss {
+	color:#fff;
+	font-family:"Courier New", Courier, monospace;
+}
+
+.summcss {
+	color:#FFCCCC;
+	font-family:"Courier New", Courier, monospace;
+	font-size:19px;
+}
+
+table {
+	border: medium solid #fff;
+	margin-right: auto;
+	margin-left: auto;
+	display:block;
+}
+
+tr {
+	color: #fff;
+	font-family:"Courier New", Courier, monospace;
+	border:medium inset #00B8E6;
+}
+
+#classtd {
+	border:medium inset #BA74D1;
+	text-align:center;
+}
+#classtd:nth-child(even) {
+    background-color: #6699FF;
+}
+
+th {
+	border:medium inset #BA74D1;
+	text-align:center;
+	text-decoration:underline;
+	font-weight:bolder;
+}
+#houses 
+{
+	display:inline-block;
+}
+
+
+img.images 
+{
+	display:none;
+	width: 125px;
+	height: 125px;
+}
+img.Himages 
+{
+	display:none;
+	margin-right: auto;
+	margin-left:auto;
+	width: 150px;
+	height: 150px;
+	border: medium inset #FFF;
+	padding: 25px 50 px;
+}
+@import url(http://fonts.googleapis.com/css?family=Life+Savers:400,700);
+#robesHeadh1 
+{
+	color:#FFDB19;
+	text-align:center;
+	text-decoration:underline;
+	font-family: 'Life Savers', cursive;
+}
+#robesHead
+{
+	background-color: #b6b2d9;
+	top:0;
+	width:100%;
+}
+#robesSB
+{
+	float:left;
+	width:180px;
+	padding: 5px;
+	border:dashed #000;
+	position:relative;
+	min-width:35%;
+	min-height:100%;
+}
+#robeBody
+{
+	background-color:#000;
+	color:#fff;
+}
+.footer {
+   bottom:0;
+   width:100%;
+   height:80px;
+   border-top:double;
+   background-color: #000;
+   color: #CCC;
+   position:relative;
+   clear:both;
+}
+
+#foot2 {
+	color: #FFF;
+	font-style:italic;
+	font-size:9px;
+	text-align:right;
+}
+#shoppingList
+{
+	display:none;
+}
+#robesTable
+{
+	padding: 10px 10px 10px 10px;
+	width: 350px;
+	float:left;
+	border:0;
+}
+
+#thexmlhttp
+{
+	@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
+	width: 280px;
+	float:left;
+	color: #FFF;
+	font-family: 'Oleo Script Swash Caps', cursive;
+}
+#robeForm
+{
+	float:left;
+}
+body{
+overflow-x:hidden;
+}
+
+.s1
+{
+  position  : absolute;
+  font-size : 10pt;
+  color     : blue;
+  visibility: hidden;
+}
+
+.s2
+{
+  position  : absolute;
+  font-size : 18pt;
+  color     : red;
+	visibility : hidden;
+}
+
+.s3
+{
+  position  : absolute;
+  font-size : 14pt;
+  color     : gold;
+	visibility : hidden;
+}
+
+.s4
+{
+  position  : absolute;
+  font-size : 12pt;
+  color     : lime;
+	visibility : hidden;
+}
+
+#localSt
+{
+	background-color:#000;
+}
+
+#welcome
+{
+	color:#9340E6;
+	text-align:center;
+	text-decoration:underline;
+	font-family: 'Life Savers', cursive;
+	text-shadow: 5px 5px 10px #471975;
+}
+
+#back
+{
+	text-align:right;
+	color:#fff;
+}
+#backk
+{
+	text-align:right;
+	font-size:11px;
+}
+
+#pics
+{
+	margin: 0 auto;
+    overflow: hidden;
+	display:block;
+}
+
+#pics img.sHimages
+{
+	margin-right: auto;
+	margin-left:auto;
+	width: 150px;
+	height: 150px;
+	border: medium inset #FFF;
+	padding: 25px 50 px;
+	float: none;
+	color: red;
+	
+}
+
+#animae
+{
+	float:right;
+}
+
+
+#radios
+{
+	color: red;
+}
+
+#hof
+{
+	margin: 0 auto;
+    overflow: hidden;
+	display:block;
+	
+}
+
+#hof img.hohpic
+{
+	margin-right: auto;
+	margin-left:auto;
+	width: 150px;
+	height: 150px;
+	border: medium inset #FFF;
+	padding: 25px 50 px;
+	float: none;
+	display:none;
+}
+
+#wel
+{
+	display:none;
+}
+
+#hof h2
+{
+	display:none;
+}
+#createpg
+{
+	float:left;
+	width:180px;
+	padding: 5px;
+	background-color:#666699;
+	border:thin solid #000;
+	color: black;
+}
+
+#radios
+{
+	color: black;
+}
+
+#refresh
+{
+	float:right;
+}
+
+#heading
+{
+	text-align:center;
+}
+
+#profileContent 
+{
+	padding: 10px 10px 10px 10px;
+	width: 780px;
+	float:left;
+}
+
+#hlist li
+{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	color: white;
+}
+
+#gb
+{
+	display:none;
+}
+
+#mainimg #imgCover
+{
+	
+	width: 75px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	
+	
+}
+
+#sprydiv
+{
+	display:none;
+}
+
+#sprystuff 
+{
+	color:black;
+}
+
+.spryclass
+{
+	color: black;
+}
+
+.sprytd
+{
+	background-color:#fff;
+}

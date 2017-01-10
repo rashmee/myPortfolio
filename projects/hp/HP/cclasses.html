@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Core Classes</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+</head>
+
+<body id="cssbody">
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div class="csscontainer">
+  <div class="cssheader"><!-- end .header -->
+  <h1 id="cssh1head"> Core Classes </h1>
+  </div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="indexx.html">Course Catalog</a></li>
+      <li><a href="cclasses.html">Core Classes</a></li>
+      <li><a href="electives.html">Electives</a></li>
+      <li><a href="excurric.html">Extra Curricular</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+    <!-- end .sidebar1 --></div>
+  <div class="csscontent">
+    <h1 id="cssh1">Core Classes</h1>
+    <p class="csspcont"> All first year student at Hogwarts have to take the 7 core subjects. In the first year they are taught at the entry level to help better accustom them to what they should expect in the fututre and also to help make choice in their later career. </p>
+    <p class="csspcont"> Every class is taken with the peers of your house and peers from your house and also one other house. Two houses of the same year are taught at the same time. This will differ from class to class. </p>
+    
+    <h2 class="cssh2"> The core classes are: </h2>
+    <ul id="classescss">
+      <li class="licss"><a href="astronomy.html" class="cssa" target="_blank">Astronomy</a></li>
+      <li class="licss"><a href="charms.html" class="cssa" target="_blank">Charms</a></li>
+      <li class="licss"><a href="dada.html" class="cssa" target="_blank">Defence Against the Dark Arts</a></li>
+      <li class="licss"><a href="flying.html" class="cssa" target="_blank">Flying</a></li>
+      <li class="licss"><a href="herb.html" class="cssa" target="_blank">Herbology</a></li>
+      <li class="licss"><a href="history.html" class="cssa" target="_blank">History of Magic</a></li>
+      <li class="licss"><a href="potions.html" class="cssa" target="_blank">Potions</a></li>
+      <li class="licss"><a href="tranfiguration.html" class="cssa" target="_blank">Transfiguration</a></li>
+   </ul>
+    
+   <h2 class="cssh2"> Other Requirements for the class</h2>
+   <h3 class="cssh3">&nbsp;&nbsp;&nbsp; <a href="uniform.html" class="cssa" onclick="_blank">  Uniform </a></h3>
+   <ul>
+   <li class="licss"> Three sets of <a href="#hpuniform" class="cssa">plain, black work robes</a> </li>
+   <li class="licss"> One plain black pointed hat for day wear</li>
+   <li class="licss"> One pair of dragon hide or similar protective gloves </li>
+   <li class="licss"> One black with silver fastingings winter cloak </li>
+   </ul>
+   <img alt="uniform" id="hpuniform" src="uniform.jpg" />
+   <br />
+   <br />
+   <h3 class="cssh3">&nbsp;&nbsp;&nbsp; Other Equipment </h3>
+   <ul>
+   <li class="licss"> 1 <a href="http://www.wizardingworldharrypotter.com/shows/ollivanders-wand-shop" class="cssa" target="_blank"> Wand</a></li>
+   <li class="licss"> 1 Cauldron (gold but preferabaly pewter, standard size 2) </li>
+   <li class="licss"> 1 set of glass or crystal phials </li>
+   <li class="licss"> 1 telescope </li>
+   <li class="licss"> 1 set of brass scales </li>
+   <li class="licss"> Students may also bring either a:
+   <ul>
+   <li class="licss"> <img alt="cat" class="anipic" src="cat.jpg" />
+    cat </li>
+   <li class="licss"> <img alt="toad" class="anipic" src="toad.jpg" /> toad</li> 
+   <li class="licss"> <img alt="owl" class="anipic" src="owl.jpg"  /> owl </li>
+   </ul>
+   </li>
+   </ul>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p><em>This website is developed as an educational project.</em></p>
+    <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

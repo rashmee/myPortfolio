@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>References</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+</head>
+
+
+<body id="cssbody">
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div class="csscontainer">
+  <div class="cssheader">
+  <h1 id="cssh1head"> <img alt="refs" class="free1" src="references.jpg"  /> References <img alt="refs" class="free1" src="references.jpg"  /> </h1>
+  <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="indexx.html">Course Catalog</a></li>
+      <li><a href="cclasses.html">Core Classes</a></li>
+      <li><a href="electives.html">Electives</a></li>
+      <li><a href="excurric.html">Extra Curricular</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="thecss.css" target="_blank"> The CSS file</a></li>
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="csscontent">
+    <h1 id="cssh1">Details about the References used on this website</h1>
+    <ol id="cssol1">
+    <li class="licss"> The Harry Potter Books by J.K. Rowling </li>
+    
+    <li class="licss"><a href="The http://harrypotter.wikia.com/wiki/Main_Page" class="cssa">The http://harrypotter.wikia.com/wiki/Main_Page</a> website <br />
+    Harry Potter. Wikia, n.d. Web. 26 Sept. 2013.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://harrypotter.wikia.com/wiki/Main_Page>" class="cssa">The http://harrypotter.wikia.com/wiki/Main_Page</a>.</li>
+    <li class="licss"> The image of the school uniforms on the <a href="cclasses.html" class="cssa"> Core Classes</a> page was found on <a href="http://www.gbacg.org/costume-resources/original/articles/HPcostume_Style1.jpg" class="cssa">http://www.gbacg.org/costume-resources/original/articles/HPcostume_Style1.jpg</a><br />
+    "What to Wear in the Wizarding World?" What to Wear in the Wizarding World? N.p.,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n.d. Web. 26 Sept. 2013. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.gbacg.org/costume-resources/original/articles/HPcostume.htm" class="cssa">http://www.gbacg.org/costume-resources/original/articles/HPcostume.htm.</a></li>
+    <li class="licss"> The image of Prof. Flitwick on the <a href="charms.html" class="cssa"> Charms Class</a> page was found on <a href="http://snarkerati.com/movie-news/warwick-davies-talks-harry-potter-and-the-deathly-hallows/" class="cssa">http://snarkerati.com/movie-news/warwick-davies-talks-harry-potter-and-the-deathly-hallows/</a><br />
+    "Warwick Davies Talks 'Harry Potter and The Deathly Hallows'" At The Movies Film <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;News and Reviews. N.p., n.d. Web. 26 Sept. 2013. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://snarkerati.com/movie-news/warwick-davies-talks-harry-potter-and-the-deathly-hallows/" class="cssa">http://snarkerati.com/movie-news/warwick-davies-talks-harry-potter-and-the-deathly-hallows/</a></li>
+    <li class="licss"> The freeware image of the parchment on the <a href="registration.html" class="cssa"> header of the Registration</a> page was found on <a href="http://www.shutterstock.com/pic-129848780/stock-photo-old-vintage-scroll-isolated-on-white-background.html?src=F5O-WS_1T3gykz1seiMWIA-1-0" class="cssa">http://www.shutterstock.com/pic-129848780/stock-photo-old-vintage-scroll-isolated-on-white-background.html?src=F5O-WS_1T3gykz1seiMWIA-1-0</a><br />
+    "Old Vintage Scroll Isolated on White Background." Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The freeware image of the books on the <a href="indexx.html" class="cssa"> header of the Welcome</a> page was found on <a href="http://www.shutterstock.com/pic-86389951/stock-photo-book-opened-magic-book-with-magic-light-education.html?src=YC0QovTmsWflH76z5LRPgw-1-23" class="cssa">http://www.shutterstock.com/pic-86389951/stock-photo-book-opened-magic-book-with-magic-light-education.html?src=YC0QovTmsWflH76z5LRPgw-1-23</a><br />
+    "Book. Opened magic book with magic light. Education" Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The freeware image of searching for references on the <a href="references.html" class="cssa"> header of the References</a> page was found on <a href="http://www.shutterstock.com/pic-136964447/stock-photo-hands-searching-through-file-folders-with-personal-finance-documents.html?src=u8h4Wu1Fyv86zLStF4PZ7g-1-0" class="cssa">http://www.shutterstock.com/pic-136964447/stock-photo-hands-searching-through-file-folders-with-personal-finance-documents.html?src=u8h4Wu1Fyv86zLStF4PZ7g-1-0</a><br />
+    "Hands searching through file folders with personal finance " Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The freeware image of a cat on the <a href="cclasses.html" class="cssa"> core classes</a> page was found on <a href="http://www.shutterstock.com/pic-108738758/stock-vector-vector-illustration-of-cat.html?src=n7Dok4-lXZO-WOKUqK9m9Q-1-56" class="cssa">http://www.shutterstock.com/pic-108738758/stock-vector-vector-illustration-of-cat.html?src=n7Dok4-lXZO-WOKUqK9m9Q-1-56</a><br />
+    "Vector illustration of cat " Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The freeware image of a toad on the <a href="cclasses.html" class="cssa"> core classes</a> page was found on <a href="http://www.shutterstock.com/pic-92144731/stock-vector-happy-frog-cartoon-character-vector-illustration.html?src=uw842ZZrksMFtKz9j47Wyg-1-51" class="cssa">http://www.shutterstock.com/pic-92144731/stock-vector-happy-frog-cartoon-character-vector-illustration.html?src=uw842ZZrksMFtKz9j47Wyg-1-51</a><br />
+    "Happy Frog Cartoon Character.Vector illustration " Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The freeware image of an owl on the <a href="cclasses.html" class="cssa"> core classes</a> page was found on <a href="http://www.shutterstock.com/pic-46731046/stock-vector-cute-vector-owl.html" class="cssa">http://www.shutterstock.com/pic-46731046/stock-vector-cute-vector-owl.html</a><br />
+    "Cute Vector Owl " Shutterstock. N.p., n.d. Web.</li>
+    <li class="licss"> The background for every page other than the registration was made on <a href="http://bgpatterns.com/" class="cssa">http://bgpatterns.com/</a><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"BgPatterns." - Background Patterns Maker. N.p., n.d. Web. 26 Sept. 2013.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://bgpatterns.com" class="cssa">http://bgpatterns.com</a>
+    </li>
+    <li class="licss"> The background patterns for the uniform.html page was made on <a href="http://www.patterncooler.com/" class="cssa">http://www.patterncooler.com/</a><br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "A FREE Seamless-Pattern-Background Design Resource." 10,000s Cool FREE Seamless Patterns &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for Blogger and Twitter Backgrounds, Blog and Website Wallpapers. N.p., n.d. Web. 24 Oct. 2013. http://www.patterncooler.com.
+   </li>
+   <li class="licss"> the pictures of the customes on pages uniform.html and robe.html were found on <a href="http://www.polyvore.com" class="cssa">http://www.polyvore.com/</a><br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Polyvore." Polyvore. N.p., n.d. Web. 24 Oct. 2013. http://www.polyvore.com.
+   </li>
+   <li class="licss"> The "neat javascript trick" was referenced from: <a href="http://www.javascriptkit.com/script/script2/sparkler.shtml" class="cssa"> http://www.javascriptkit.com/script/script2/sparkler.shtml</a><br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Cut and Paste Sparkler." Cut and Paste Sparkler. N.p., n.d. Web. 24 Oct. 2013. http://www.javascriptkit.com/script/script2/sparkler.shtml. 
+   </li>
+    </ol>
+    
+    <!-- end .content --></div>
+  <div class="footer">
+    <p id="foot1"><em>This website is developed as an educational project.</em></p>
+    <p id="foot2">Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

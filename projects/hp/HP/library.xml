@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "library.xsl"?>
+<!--http://mason.gmu.edu/~rprakash/library.xml -->
+<dvds>
+	<dvdId id="1">
+		<dvdTitle>Breakfast at Tiffany's</dvdTitle>
+		<dvdFormat>Movie</dvdFormat>
+		<dvdGenre> Classic</dvdGenre>
+	</dvdId>
+	
+	<dvdId id="2">
+		<dvdTitle>Contact</dvdTitle>
+		<dvdFormat>Movie</dvdFormat>
+		<dvdGenre>Science fiction</dvdGenre>
+	</dvdId>
+	
+	<dvdId id="3">
+		<dvdTitle>Little Britain</dvdTitle>
+		<dvdFormat>Movie</dvdFormat>
+		<dvdGenre> Comedy</dvdGenre>
+	</dvdId>
+</dvds>

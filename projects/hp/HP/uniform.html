@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Uniform</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+<script type="text/javascript">
+//<![CDATA[
+	//array of random pictures
+	//var images = ["robe1.jpeg", "robe2.JPG", "robe3.jpg"];
+	//array of random pictures
+	var bgimages = ["bggrif.png", "bgslyth.png", "bgrav.png", "bghuff.png", "bgmm.png"];
+	//function to get the background images
+	function getImageTag()
+	{
+		var bgimg = '<img src=\"';
+		
+		//using random method to display random image
+		var randomIndex = Math.floor(Math.random() * bgimages.length);
+		
+		//variable var will be any image from the images array
+		
+		bgimg = bgimages[randomIndex];
+		document.body.style.backgroundImage = "url("+ bgimg +")";
+		
+		
+		//setting alt for array of images
+		bgimg += '\" alt=\ "bgs>';
+		
+		//will return the random image
+		return bgimg;
+		
+	}
+	
+	//function to get the images
+	function getRobes()
+	{
+		var imgs = '<img src=\"';
+		
+		//using random method to display random image
+		var indexRandom = Math.floor(Math.random() * images.length);
+		imgs += images[indexRandom];
+		
+		//using random method to display random image
+		imgs += '\" alt=\ "robes>';
+		
+		//will return random image
+		return imgs
+	}
+	
+	//start function for local storage
+	function save()
+	{
+		var name = document.getElementById('enterName').value; //get element inputted by the user
+		localStorage.setItem("text", name); //setItem in local storage... this will save the name
+		document.getElementById("welcome").innerHTML = "Welcome " + localStorage.getItem("text")+ " to Madam Malkin's Robes for All Occasions"; //Welcome message when person visits the page
+	}
+	
+	//this function is called whenever the page loads remembering the user
+	function load()
+	{
+		var storedValue = localStorage.getItem('text'); //will get item from local storage by key
+		if(storedValue) //if user found
+		{
+			document.getElementById("welcome").innerHTML = "Welcome " + localStorage.getItem("text")+ " to Madam Malkin's Robes for All Occasions";
+			//it will print this message
+		}
+		
+		}
+		function remove()
+		{
+			document.getElementById('enterName').value = '';
+			localStorage.removeItem("text");
+		}
+		//function edit(enterName)
+		//{
+			//document.getElementById("enterName").value = tag;
+		//}
+		function open_win()
+		{
+			window.open("robes.html");
+		}
+	//]]>
+</script>
+</head>
+
+<body onload="load()">
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div id="uniformbg">
+
+
+<form id="localSt" action="#">
+<fieldset id="lSField">
+<h1 id="welcome"></h1>
+Please Enter Your Name: <br /><input type="text" id="enterName"  />
+<input type="button" value="Enter" id="buttonID" onclick="save()" />
+ <br />
+<input type="button" value="Enter Site" id="site" onclick="open_win()"  />
+<p id="backk"><a href="indexx.html" class="cssa" onclick="_blank"> Back to Course Catalog </a> </p>
+</fieldset>
+</form>
+
+<script type="text/javascript">
+	document.write(getImageTag());
+	document.write(getRobes());
+</script>
+</div>
+<div class="footer">
+    <p id="foot1"><em>This website is developed as an educational project.</em></p>
+    <p id="foot2">Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --> </div>
+</body>
+</html>

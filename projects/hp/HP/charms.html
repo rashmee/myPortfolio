@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Charms</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+</head>
+
+
+<body id="cssbody">
+
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div class="csscontainer">
+  <div class="cssheader">
+  <h1 id="cssh1head"> Charms </h1>
+  <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="indexx.html">Course Catalog</a></li>
+      <li><a href="cclasses.html">Core Classes</a></li>
+      <li><a href="electives.html">Electives</a></li>
+      <li><a href="excurric.html">Extra Curricular</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </div>
+  <div class="csscontent">
+    <h1 id="cssh1">Information about the Charms class:</h1>
+    <table>
+    <tr>
+    <th> About the Class </th>
+    <td id="classtd"> <p>The student need to learn various charms to perform simple magical charms. This is a very essential class for all witches and wizards.</p></td>
+    <td id="classtd"> Charms like: flying charm, making water, summonning objects and many others. </td> 
+    <td id="classtd">This class is madatory from years one through five.</td>
+    
+    </tr>
+    <tr>
+    <th> Professor </th>
+    <td id="classtd"> Filius Flitwick</td>
+    <td id="classtd"> <img alt="charmsprof" class="profpic" src="flitwick.jpg" /></td>
+    <td id="classtd"> Professor Flitwick has taught at Hogwarts for the past 30 years. He is also teaches frog choir </td>
+    </tr>
+    <tr>
+    <th> Class Details </th>
+    <td id="classtd"> Class Location </td>
+    <td id="classtd"> This class meets in Class 99 and sometimes in Class 2E.</td>
+    <td id="classtd">This class usually meets various times in the week. Please refer to schedule on the first day of class.    </td>
+   	</tr>
+    <tr>
+    <th> Required Material </th>
+    <td id="classtd"> <ul>
+            <li> The Standard Book of Spells by Miranda Goshawk </li>
+            <li> Achievements in Charming </li>
+            <li> Quintessence: A Quest </li>
+         </ul></td>
+     <td id="classtd"> Wand </td>
+	<td id="classtd"> All the books can be purchased at Flourish and Blotts Bookstore in Diagon Alley.</td>
+    </tr>
+    </table>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p id="foot1"><em>This website is developed as an educational project.</em></p>
+    <p id="foot2">Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

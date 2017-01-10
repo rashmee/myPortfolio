@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<theList>
+	<classlist>
+		<class>Transfiguration</class>
+		<teacher>Minerva McGonnagal</teacher>
+		<offHours>Friday 3:00 PM- 4:00 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Defense Against the Dark Arts</class>
+		<teacher>Remus Lupin </teacher>
+		<offHours>Thursday 2:00 PM- 3:00 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Potions</class>
+		<teacher>Severus Snape</teacher>
+		<offHours>Tuesday 2:00 PM- 3:00 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Charms</class>
+		<teacher>Filius Flitwick </teacher>
+		<offHours>Wednesday 1:00 PM- 2:00 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Herbology</class>
+		<teacher>Pomona Sprout</teacher>
+		<offHours>Friday 1:30 PM- 2:30 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Divinition</class>
+		<teacher>Sybill Treylawney </teacher>
+		<offHours>Tuesday 3:00 PM- 4:00 PM</offHours>
+	</classlist>
+	<classlist>
+		<class>Care of Magical Creatured</class>
+		<teacher>Rubeus Hagrid </teacher>
+		<offHours>Saturday at Tea Time</offHours>	
+		</classlist>
+</theList>
+	

@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Robes</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+
+<script type="text/javascript">
+	 document.write(document.lastModified);
+	//start function theOnClicks()
+	function theOnClicks()
+	{
+		var grif = document.getElementById("grif"); //will get the Gryffindor radio element by id
+		//if the Gryffindor radio button is clicked, it will display options for radio buttons and othe houses will disappear.
+		if(grif.checked==true)
+		{
+			document.getElementById("griffList").style.display='block'; //Show the Gryffindor list
+			document.getElementById("slythLi").style.display = 'none'; //hide Slytherin list
+			document.getElementById("ravLi").style.display = 'none'; //hide Ravenclaw list
+			document.getElementById("huffLi").style.display = 'none'; //hide Hufflepuff list
+			document.getElementById("gLogo").style.display = 'block'; //display Gryffindor logo
+			document.body.style.backgroundColor = "#B8161C"; //set background color
+			document.getElementById("robesSB").style.border = "dashed #000"; //set border for sidebar
+			document.getElementById("robesHead").style.backgroundColor = "#000";//set background color for header
+			document.getElementById("robesHeadh1").style.color = "#FCCE15"; //text color for h1 element in header
+			document.getElementById("robesList").style.color = "#FCCE15"; //set text color in body
+			document.getElementById("robesList").style.fontFamily = "Courier New, Courier, monospace"; //set font family
+		}
+		
+		
+		var slyth = document.getElementById("slyth"); //will get the Slytherin radio element by id
+		//if the Slytherin radio button is clicked, it will display options for radio buttons and othe houses will disappear.
+		if(slyth.checked==true)
+		{
+			document.getElementById("slythList").style.display='block'; //Show the Slytherin list
+			document.getElementById("grifLi").style.display= 'none'; //hide Gryffindor list
+			document.getElementById("ravLi").style.display = 'none'; //hide Ravenclaw list
+			document.getElementById("huffLi").style.display = 'none'; //hide Hufflepuff list
+			document.getElementById("sLogo").style.display = 'block'; //display Slytherin logo
+			document.body.style.backgroundColor = "#234038";//set background color
+			document.getElementById("robesSB").style.border = "dashed #000"; //set border for sidebar
+			document.getElementById("robesHead").style.backgroundColor = "#000"; //set background color for header
+			document.getElementById("robesHeadh1").style.color = "silver"; //text color for h1 element in header
+			document.getElementById("robesList").style.color = "silver"; //set text color in body
+			document.getElementById("robesList").style.fontFamily = "Georgia, serif"; //set font family
+		}
+		
+		
+		var rav = document.getElementById("rav");//will get the Ravenclaw radio element by id
+		//if the Ravenlclaw radio button is clicked, it will display options for radio buttons and othe houses will disappear.
+		if(rav.checked==true)
+		{
+			document.getElementById("ravList").style.display='block'; //Show the Ravenclaw list
+			document.getElementById("grifLi").style.display= 'none'; //hide Gryffindor list
+			document.getElementById("huffLi").style.display = 'none'; //hide Hufflepuff list
+			document.getElementById("slythLi").style.display = 'none'; //hide Slytherin list
+			document.getElementById("rLogo").style.display = 'block'; //display Ravenclaw logo
+			document.body.style.backgroundColor = "#182071"; //set background color
+			document.getElementById("robesSB").style.border = "dashed #788EC8"; //set border for sidebar
+			document.getElementById("robesHead").style.backgroundColor = "#000"; //set background color for header
+			document.getElementById("robesHeadh1").style.color = "#98594A"; //text color for h1 element in header
+			document.getElementById("robesList").style.color = "#98594A"; //set text color in body
+			document.getElementById("robesList").style.fontFamily = "Lucida Sans Unicode, Lucida Grande, sans-serif"; //set font family
+		}
+		
+		
+		var huff = document.getElementById("huff"); //will get the Hufflepuff radio element by id
+		//if the Hufflepuff radio button is clicked, it will display options for radio buttons and othe houses will disappear.
+		if(huff.checked==true)
+		{
+			document.getElementById("huffList").style.display='block'; //Show the Hufflepuff list
+			document.getElementById("ravLi").style.display = 'none'; //hide Ravenclaw list 
+			document.getElementById("grifLi").style.display= 'none'; //hide Gryffindor list
+			document.getElementById("slythLi").style.display = 'none'; //hide Slytherin list
+			document.getElementById("hLogo").style.display = 'block'; //display Hufflepuff logo
+			document.body.style.backgroundColor = "#F1E68A"; //set background color
+			document.getElementById("robesSB").style.border = "dashed #1A1B1D"; //set border for sidebar
+			document.getElementById("robesHead").style.backgroundColor = "#000"; //set background color for header
+			document.getElementById("robesHeadh1").style.color = "#808378"; //text color for h1 element in header
+			document.getElementById("robesList").style.color = "#808378"; //set text color in body
+			document.getElementById("robesList").style.fontFamily = "Comic Sans MS, cursive, sans-serif"; //set font family
+		}
+		
+		
+		var griffRobes = document.getElementById("griffRobes"); //Will get the Gryffindor "School Robes" checkbox element by id
+		//if the School Robes checkbox is checked then:
+		if(griffRobes.checked==true)
+		{
+		document.getElementById("sRGrifCheck").style.display='block';//display the checkboxes for School Robes
+		}
+		//if the School Robes checkbox is unchecked then:
+		else
+		{
+		document.getElementById("sRGrifCheck").style.display='none';//will hide the checkboxes for School Robes
+		}
+		
+		
+		var slythRobes = document.getElementById("slythRobes");//Will get the Slytherin "School Robes" checkbox element by id
+		//if the School Robes checkbox is checked then:
+		if(slythRobes.checked==true)
+		{
+		document.getElementById("sRSlythCheck").style.display='block';//display the checkboxes for School Robes
+		}
+		//if the School Robes checkbox is unchecked then:
+		else
+		{
+		document.getElementById("sRSlythCheck").style.display='none';//will hide the checkboxes for School Robes
+		}
+		
+		
+		var ravRobes = document.getElementById("ravRobes");//Will get the Ravenclaw "School Robes" checkbox element by id
+		//if the School Robes checkbox is checked then:
+		if(ravRobes.checked==true)
+		{
+		document.getElementById("sRRavCheck").style.display='block';//display the checkboxes for School Robes
+		}
+		//if the School Robes checkbox is unchecked then:
+		else
+		{
+		document.getElementById("sRRavCheck").style.display='none'; //will hide the checkboxes for School Robes
+		}
+		
+		
+		var huffRobes = document.getElementById("huffRobes"); //Will get the Hufflepuff "School Robes" checkbox element by id
+		//if the School Robes checkbox is checked then:
+		if(huffRobes.checked==true)
+		{
+		document.getElementById("sRHuffCheck").style.display='block';//display the checkboxes for School Robes
+		}
+		//if the School Robes checkbox is unchecked then:
+		else
+		{
+		document.getElementById("sRHuffCheck").style.display='none';//will hide the checkboxes for School Robes
+		}
+		
+		
+		var quidRG = document.getElementById("quidRG");//Will get the Hufflepuff "Quidditch Robes" checkbox element by id
+		//if the Quidditch Robes checkbox is checked then:
+		if(quidRG.checked==true)
+		{
+			document.getElementById("qGrifCheck").style.display='block';//display the checkboxes for Quidditch Robes
+		}
+		//if the Quidditch Robes checkbox is unchecked then:
+		else
+		{
+			document.getElementById("qGrifCheck").style.display='none';//will hide the checkboxes for Quidditch Robes
+		}
+		
+		
+		var quidRS = document.getElementById("quidRS");//Will get the Slytherin "Quidditch Robes" checkbox element by id
+		//if the Quidditch Robes checkbox is checked then:
+		if(quidRS.checked==true)
+		{
+			document.getElementById("qSlythCheck").style.display='block';//display the checkboxes for Quidditch Robes
+		}
+		//if the Quidditch Robes checkbox is unchecked then:
+		else
+		{
+			document.getElementById("qSlythCheck").style.display='none';//will hide the checkboxes for Quidditch Robes
+		}
+		
+		
+		var quidRR = document.getElementById("quidRR");//Will get the Ravenclaw "Quidditch Robes" checkbox element by id
+		//if the Quidditch Robes checkbox is checked then:
+		if(quidRR.checked==true)
+		{
+			document.getElementById("qRavCheck").style.display='block';//display the checkboxes for Quidditch Robes
+		}
+		//if the Quidditch Robes checkbox is unchecked then:
+		else
+		{
+			document.getElementById("qRavCheck").style.display='none';//will hide the checkboxes for Quidditch Robes
+		}
+		
+		
+		var quidRH = document.getElementById("quidRH");//Will get the Hufflepuff "Quidditch Robes" checkbox element by id
+		//if the Quidditch Robes checkbox is checked then:
+		if(quidRH.checked==true)
+		{
+			document.getElementById("qHuffCheck").style.display='block';//display the checkboxes for Quidditch Robes
+		}
+		//if the Quidditch Robes checkbox is unchecked then:
+		else
+		{
+			document.getElementById("qHuffCheck").style.display='none';//will hide the checkboxes for Quidditch Robes
+		}
+		
+		
+		//To view the Gryffindor scarf
+		var scarfG = document.getElementById("scarfG");//will get the Gryffindor scarf checkbox by id
+		//if checkbox is checked then:
+		if(scarfG.checked== true)
+		{
+			document.getElementById("iScarfG").style.display = 'block';//display image
+			document.getElementById("scarfP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+			document.getElementById("shoppingList").style.border = 'medium solid #F0E9D5'; //set table border
+			document.getElementById("shoppingList").style.marginRight = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.marginLeft = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.padding = '10px'; //setting table padding to 10px
+			document.getElementById("shoppingList").style.color = '#FCCE15'; //setting font color 
+			document.getElementById("shoppingList").style.fontFamily = "Courier New, Courier, monospace"; //setting font family
+			
+		}
+		//if unchecked
+		else
+		{
+			document.getElementById("iScarfG").style.display = 'none';//hide image
+			document.getElementById("scarfP").style.display = 'none';//hide price
+		}
+		
+		
+		//To view the Slytherin scarf
+		var scarfS = document.getElementById("scarfS");//will get the Slytherin scarf checkbox by id
+		//if checkbox is checked then:
+		if(scarfS.checked==true)
+		{
+			document.getElementById("iScarfS").style.display = 'block';//display image
+			document.getElementById("scarfP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+			document.getElementById("shoppingList").style.border = 'medium solid #000'; //set table border
+			document.getElementById("shoppingList").style.marginRight = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.marginLeft = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.padding = '10px';//setting table padding to 10px
+			document.getElementById("shoppingList").style.color = 'silver'; //setting font color
+			document.getElementById("shoppingList").style.fontFamily = "Georgia, serif"; //setting font family
+		}
+		//if unchecked
+		else
+		{
+			document.getElementById("iScarfS").style.display = 'none';//hide image
+		}
+		
+		
+		//To view the Ravenclaw scarf
+		var scarfR = document.getElementById("scarfR");//will get the Ravenclaw scarf checkbox by id
+		//if checkbox is checked then:
+		if(scarfR.checked== true)
+		{
+			
+			document.getElementById("iScarfR").style.display = 'block';//display image
+			document.getElementById("scarfP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+			document.getElementById("shoppingList").style.border = 'medium solid #788EC8'; //set table border
+			document.getElementById("shoppingList").style.marginRight = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.marginLeft = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.padding = '10px'; //setting table padding to 10px
+			document.getElementById("shoppingList").style.color = '#98594A'; //setting font color
+			document.getElementById("shoppingList").style.fontFamily = "Lucida Sans Unicode, Lucida Grande, sans-serif"; //setting font family
+		}
+		//if unchecked
+		else
+		{
+			document.getElementById("iScarfR").style.display = 'none';//hide image
+		}
+		//To view the Hufflepuff scarf
+		var scarfH = document.getElementById("scarfH");
+		if(scarfH.checked== true)
+		{
+			
+			document.getElementById("iScarfH").style.display = 'block'; //display image
+			document.getElementById("scarfP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+			document.getElementById("shoppingList").style.border = 'medium solid #1A1B1D'; //set table border
+			document.getElementById("shoppingList").style.marginRight = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.marginLeft = 'auto'; //setting table in the middle of the table
+			document.getElementById("shoppingList").style.padding = '10px'; //setting table padding to 10px
+			document.getElementById("shoppingList").style.color = '#808378'; //setting font color
+			document.getElementById("shoppingList").style.fontFamily = "Comic Sans MS, cursive, sans-serif"; //setting font family
+		} //if unchecked
+		else
+		{
+			document.getElementById("iScarfH").style.display = 'none'; //hide image
+		}
+		
+		//To view the pointed hat
+		var pHatG = document.getElementById("pHatG");
+		if(pHatG.checked==true) //if checked
+		{
+			document.getElementById("ipHat").style.display = 'block'; //display image
+			document.getElementById("pHatP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}//if unchecked
+		else
+		{
+			
+			document.getElementById("ipHat").style.display = 'none'; //hide image
+			document.getElementById("pHatP").style.display = 'none'; //hide proce 
+		}
+		
+		//To view the pointed hat
+		var pHatS = document.getElementById("pHatS");
+		if(pHatS.checked==true) //if checked
+		{
+			document.getElementById("ipHat").style.display = 'block'; //display image
+			document.getElementById("pHatP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the pointed hat
+		var pHatR = document.getElementById("pHatR");
+		if(pHatR.checked==true) //if checked
+		{
+			document.getElementById("ipHat").style.display = 'block'; //display image
+			document.getElementById("pHatP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		
+		//to view the pointed hat
+		var pHatH = document.getElementById("pHatH");
+		if(pHatH.checked==true) //if checked
+		{
+			document.getElementById("ipHat").style.display = 'block'; //display image
+			document.getElementById("pHatP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the gryffindor robes
+		var schRobesG = document.getElementById("schRobesG");
+		if(schRobesG.checked==true) //if checked
+		{
+			document.getElementById("iRobeG").style.display = 'block'; //display image
+			document.getElementById("robesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iRobeG").style.display = 'none'; //hide image
+			document.getElementById("robesP").style.display = 'none'; //hide price
+		}
+		
+		//to view the slytherin robes
+		var schRobesS = document.getElementById("schRobesS");
+		if(schRobesS.checked==true) //if checked
+		{
+			document.getElementById("iRobeS").style.display = 'block'; //display image
+			document.getElementById("robesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if uncheckec
+		{
+			document.getElementById("iRobeS").style.display = 'none'; //hide image
+		}
+		
+		//to view the ravenclaw robes
+		var schRobesR = document.getElementById("schRobesR");
+		if(schRobesR.checked==true) //if checked
+		{
+			document.getElementById("iRobeR").style.display = 'block'; //display image
+			document.getElementById("robesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iRobeR").style.display = 'none';//hide image
+		}
+		
+		//to view the hufflepuff robes
+		var schRobesH = document.getElementById("schRobesH");
+		if(schRobesH.checked==true) //if checked
+		{
+			document.getElementById("iRobeH").style.display = 'block'; //display image
+			document.getElementById("robesP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iRobeH").style.display = 'none'; //hide image
+			
+		}
+		
+		//to view the tie
+		var tieG = document.getElementById("tieG");
+		if(tieG.checked==true) //if checked
+		{
+			document.getElementById("iTieG").style.display = 'block'; //display image
+			document.getElementById("tieP").style.display = 'block';//display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iTieG").style.display = 'none'; //hide image
+			document.getElementById("tieP").style.display = 'none'; //hide price
+		}
+		
+		//to view the tie
+		var tieS = document.getElementById("tieS");
+		if(tieS.checked==true) //if checked
+		{
+			document.getElementById("iTieS").style.display = 'block'; //display image
+			document.getElementById("tieP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iTieS").style.display = 'none'; //hide image
+		}
+		
+		//to view the tie
+		var tieR = document.getElementById("tieR");
+		if(tieR.checked==true) //if checked
+		{
+			document.getElementById("iTieR").style.display = 'block'; //display image
+			document.getElementById("tieP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iTieR").style.display = 'none'; //hide image
+		}
+		
+		//to view the tie
+		var tieH = document.getElementById("tieH");
+		if(tieH.checked==true) //if checked
+		{
+			document.getElementById("iTieH").style.display = 'block'; //display image
+			document.getElementById("tieP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iTieH").style.display = 'none'; //hide image
+		}
+		
+		//To view the gloves
+		var schGlovesG = document.getElementById("schGlovesG");
+		if(schGlovesG.checked==true) //if checked
+		{
+			document.getElementById("iGloves").style.display = 'block'; //display image
+			document.getElementById("glovesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iGloves").style.display = 'none'; //hide image
+			document.getElementById("glovesP").style.display = 'none'; //hide price
+		}
+		
+		//To view the gloves
+		var schGlovesS = document.getElementById("schGlovesS");
+		if(schGlovesS.checked==true) //if checked
+		{
+			document.getElementById("iGloves").style.display = 'block'; //display image
+			document.getElementById("glovesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//To view the gloves
+		var schGlovesR = document.getElementById("schGlovesR");
+		if(schGlovesR.checked==true) //if checked
+		{
+			document.getElementById("iGloves").style.display = 'block'; //display image
+			document.getElementById("glovesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the gloves
+		var schGlovesH = document.getElementById("schGlovesH");
+		if(schGlovesH.checked==true) //if checked
+		{
+			document.getElementById("iGloves").style.display = 'block'; //display image
+			document.getElementById("glovesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the jumper
+		var shirtG = document.getElementById("shirtG");
+		if(shirtG.checked==true) //if checked
+		{
+			document.getElementById("iShirtG").style.display = 'block'; //display image
+			document.getElementById("shirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iShirtG").style.display = 'none'; //hide image
+			document.getElementById("shirtP").style.display = 'none'; //hide price
+		}
+		
+		//to view the jumper
+		var shirtS = document.getElementById("shirtS");
+		if(shirtS.checked==true) //if checked
+		{
+			document.getElementById("iShirtS").style.display = 'block'; //display image
+			document.getElementById("shirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iShirtS").style.display = 'none'; //hide image
+		}
+		
+		//To view the jumper
+		var shirtR = document.getElementById("shirtR");
+		if(shirtR.checked==true) //if checked
+		{
+			document.getElementById("iShirtR").style.display = 'block'; //display image
+			document.getElementById("shirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iShirtR").style.display = 'none'; //hide image
+			
+		}
+		
+		//to view the jumper
+		var shirtH = document.getElementById("shirtH");
+		if(shirtH.checked==true) //if checke
+		{
+			document.getElementById("iShirtH").style.display = 'block'; //display image
+			document.getElementById("shirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iShirtH").style.display = 'none'; //hide image
+		}
+		
+		//to view the skirt
+		var skirtG = document.getElementById("skirtG");
+		if(skirtG.checked==true) //if checked
+		{
+			document.getElementById("iSkirt").style.display = 'block'; //display image
+			document.getElementById("skirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iSkirt").style.display = 'none'; //hide image
+			document.getElementById("skirtP").style.display = 'none'; //hide price
+		}
+		
+		//to view the skirt
+		var skirtS = document.getElementById("skirtS");
+		if(skirtS.checked==true) //if checked
+		{
+			document.getElementById("iSkirt").style.display = 'block'; //display image
+			document.getElementById("skirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the skirt
+		var skirtR = document.getElementById("skirtR");
+		if(skirtR.checked==true) //if checked
+		{
+			document.getElementById("iSkirt").style.display = 'block'; //display image
+			document.getElementById("skirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the skirt
+		var skirtH = document.getElementById("skirtH");
+		if(skirtH.checked==true) //if checked
+		{
+			document.getElementById("iSkirt").style.display = 'block'; //display image
+			document.getElementById("skirtP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//To view the pants
+		var pantsG = document.getElementById("pantsG");
+		if(pantsG.checked==true) //if checked
+		{
+			document.getElementById("iPants").style.display = 'block'; //display image
+			document.getElementById("pantsP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iPants").style.display = 'none'; //hide image
+			document.getElementById("pantsP").style.display = 'none'; //hide price
+		}
+		
+		//to view the pants
+		var pantsS = document.getElementById("pantsS");
+		if(pantsS.checked==true) //if checked
+		{
+			document.getElementById("iPants").style.display = 'block'; //display image
+			document.getElementById("pantsP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the pants
+		var pantsR = document.getElementById("pantsR");
+		if(pantsR.checked==true) //if checked
+		{
+			document.getElementById("iPants").style.display = 'block'; //display image
+			document.getElementById("pantsP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		
+		//to view the pants
+		var pantsH = document.getElementById("pantsH");
+		if(pantsH.checked==true) //if checked
+		{
+			document.getElementById("iPants").style.display = 'block'; //display image
+			document.getElementById("pantsP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the quidditch  robes
+		var qRobesG = document.getElementById("qRobesG");
+		if(qRobesG.checked==true) //if checked
+		{
+			document.getElementById("iQRobeG").style.display = 'block'; //display image
+			document.getElementById("qrobesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iQRobeG").style.display = 'none'; //hide image
+			document.getElementById("qrobesP").style.display = 'none'; //hide price
+		}
+		
+		//to view the quidditch robes
+		var qRobesS = document.getElementById("qRobesS");
+		if(qRobesS.checked==true) //if checked
+		{
+			document.getElementById("iQRobeS").style.display = 'block'; //display image
+			document.getElementById("qrobesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iQRobeS").style.display = 'none';  //hide image
+			
+		}
+		
+		//to view the quidditch robes
+		var qRobesR = document.getElementById("qRobesR");
+		if(qRobesR.checked==true) //if checked
+		{
+			document.getElementById("iQRobeR").style.display = 'block'; //display image
+			document.getElementById("qrobesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iQRobeR").style.display = 'none'; //hide image
+		}
+		
+		//to view the quidditch robes
+		var qRobesH = document.getElementById("qRobesH");
+		if(qRobesH.checked==true) //if checked
+		{
+			document.getElementById("iQRobeH").style.display = 'block'; //display image
+			document.getElementById("qrobesP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			
+			document.getElementById("iQRobeH").style.display = 'none'; //hide image
+			
+		}
+		
+		//to view the gloves
+		var qGlovesG = document.getElementById("qGlovesG");
+		if(qGlovesG.checked==true) //if checked
+		{
+			document.getElementById("iGear").style.display = 'block'; //display image
+			document.getElementById("gearP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iGear").style.display = 'none'; //hide image
+			document.getElementById("gearP").style.display = 'none'; //hide price
+		}
+		
+		//to view the gloves
+		var qGlovesS = document.getElementById("qGlovesS");
+		if(qGlovesS.checked==true) //if checked
+		{
+			document.getElementById("iGear").style.display = 'block'; //display image
+			document.getElementById("gearP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the gloves
+		var qGlovesR = document.getElementById("qGlovesR");
+		if(qGlovesR.checked==true) //if checked
+		{
+			document.getElementById("iGear").style.display = 'block'; //display image
+			document.getElementById("gearP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the gloves
+		var qGlovesH = document.getElementById("qGlovesH");
+		if(qGlovesH.checked==true) //if checked
+		{
+			document.getElementById("iGear").style.display = 'block'; //display image
+			document.getElementById("gearP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		//to view the yule ball styles
+		var yuleG = document.getElementById("yuleG");
+		if(yuleG.checked==true) //if checked
+		{
+			document.getElementById("iYB").style.display = 'block'; //display image
+			document.getElementById("ybP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		else //if unchecked
+		{
+			document.getElementById("iYB").style.display = 'none'; //hide image
+			document.getElementById("ybP").style.display = 'none'; //hide price
+		}
+		
+		//to view the yule ball style
+		var yuleS = document.getElementById("yuleS");
+		if(yuleS.checked==true) //if checked
+		{
+			document.getElementById("iYB").style.display = 'block'; //display image
+			document.getElementById("ybP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		
+		//to view the yule ball style
+		var yuleR = document.getElementById("yuleR");
+		if(yuleR.checked==true) //if checked
+		{
+			document.getElementById("iYB").style.display = 'block'; //display image
+			document.getElementById("ybP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		
+		//to view the yule ball style
+		var yuleH = document.getElementById("yuleH");
+		if(yuleH.checked==true) //if checked
+		{
+			document.getElementById("iYB").style.display = 'block'; //display image
+			document.getElementById("ybP").style.display = 'block'; //display price
+			document.getElementById("shoppingList").style.display = 'block'; //display table
+		}
+		
+		
+	}
+	
+	var theRequest; //variable to hold XMLHttpRequest object
+	
+	//set up event handlers
+	function rhandlers()
+	{
+		var iImg;
+		iImg = document.getElementById("iScarfG");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "scarfG.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iScarfS");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "scarfs.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iScarfR");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "scarfr.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iScarfH");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "scarfh.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("ipHat");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "hat.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iTieG");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "tieg.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iTieS");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "ties.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iTieR");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "tier.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iTieH");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "tieh.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iGloves");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "gloves.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iRobeG");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "robesg.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iRobeS");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "robess.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iRobeR");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "robesr.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iRobeH");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "robesh.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iShirtG");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "shirtg.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iShirtS");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "shirts.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iShirtR");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "shirtr.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iShirtH");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "shirth.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iSkirt");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "skirt.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iPants");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "pants.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iQRobeG");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "qrobesg.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iQRobeS");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "qrobess.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iQRobeR");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "qrobesr.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iQRobeH");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "qrobesh.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iGear");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "gears.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+		iImg = document.getElementById("iYB");
+		iImg.addEventListener("mouseover", 
+			function() {getContent( "ybrobes.html" );}, false);
+		iImg.addEventListener("mouseout", clearContent, false);
+	}//end rhandlers function
+	
+	//set up and send the asynchronous request.
+	function getContent( url )
+	{
+		// attempt to create XMLHttpRequest object and make the request
+		try
+		{
+			theRequest = new XMLHttpRequest(); // create request object
+			 // register event handler
+			theRequest.addEventListener(
+               "readystatechange", stateChange, false);
+			 theRequest.open("GET", url, true); // prepare the request
+			 theRequest.send( null); // send the request
+		} // end try
+		
+		catch ( exception )
+		{
+			alert( "Request failed." );
+		 } // end catch
+      } // end function getContent
+      
+      // displays the response data on the page
+	function stateChange()
+      {
+         if ( theRequest.readyState == 4 && theRequest.status == 200 )
+         {
+            document.getElementById( "thexmlhttp" ).innerHTML = 
+               theRequest.responseText; // places text in contentArea
+         } // end if
+      } // end function stateChange
+	  
+	  // clear the content of the box
+	  function clearContent()
+      {
+         document.getElementById( "thexmlhttp" ).innerHTML = "";
+      } // end function clearContent
+
+      window.addEventListener( "load", rhandlers, false );
+	
+    </script>
+</head>
+
+
+<body id="robeBody" onload="theOnClicks()">
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div id="robesContainer">
+<p id="back"><a href="indexx.html" class="cssa" onclick="_blank"> Back to Course Catalog </a> </p>
+<div id="robesHead">
+  <h1 id="robesHeadh1">Best Place for all your Robe needs!!! </h1>
+  </div>
+
+<img id="gLogo" src="griff.gif" alt="griffLogo" class="Himages" />
+<img id="sLogo" src="slyth.jpg" alt="slythLogo" class="Himages" />
+<img id="rLogo" src="rav.JPG" alt="ravLogo" class="Himages" />
+<img id="hLogo" src="huff.jpg" alt="huffLogo" class="Himages" />
+<div id="robesSB">
+<form id="robeForm" action="#">
+<ul id="robesList">
+<li>What house do you belong to: 
+<ul id="houses">
+<li id="grifLi"> <input type="radio" id="grif" name="house" onclick="theOnClicks()" /> Gryffindor 
+<ul id="griffList" style="display:none">
+<li> <input type="checkbox" id="griffRobes" name="schG" onclick="theOnClicks()" /> School Robes 
+<ul style="display:none" id="sRGrifCheck">
+<li> <input type="checkbox" id="scarfG" onclick="theOnClicks()" />Scarf </li>
+<li> <input type="checkbox" id="pHatG" onclick="theOnClicks()" />Pointed Hat </li>
+<li> <input type="checkbox" id="schRobesG" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="tieG" onclick="theOnClicks()" />Tie </li>
+<li> <input type="checkbox" id="schGlovesG" onclick="theOnClicks()" />Gloves </li>
+<li> <input type="checkbox" id="shirtG" onclick="theOnClicks()" />Jumper </li>
+<li> <input type="checkbox" id="skirtG" onclick="theOnClicks()" />Skirts </li>
+<li> <input type="checkbox" id="pantsG" onclick="theOnClicks()" />Pants </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="quidRG" name="quidG" onclick="theOnClicks()" /> Quidditch Robes 
+<ul style="display:none" id="qGrifCheck">
+<li> <input type="checkbox" id="qRobesG" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="qGlovesG" onclick="theOnClicks()" />Gear </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="yuleG" name="ybG" onclick="theOnClicks()" /> Yule Ball Robes </li>
+</ul>
+</li>
+<li id="slythLi"> <input type="radio" id="slyth" name="house" onclick="theOnClicks()"/> Slytherin 
+<ul id="slythList" style="display:none">
+<li> <input type="checkbox" id="slythRobes" name="schS" onclick="theOnClicks()" /> School Robes 
+<ul style="display:none" id="sRSlythCheck">
+<li> <input type="checkbox" id="scarfS" onclick="theOnClicks()" />Scarf </li>
+<li> <input type="checkbox" id="pHatS" onclick="theOnClicks()" />Pointed Hat </li>
+<li> <input type="checkbox" id="schRobesS" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="tieS" onclick="theOnClicks()" />Tie </li>
+<li> <input type="checkbox" id="schGlovesS" onclick="theOnClicks()" />Gloves </li>
+<li> <input type="checkbox" id="shirtS" onclick="theOnClicks()" />Jumper </li>
+<li> <input type="checkbox" id="skirtS" onclick="theOnClicks()" />Skirts </li>
+<li> <input type="checkbox" id="pantsS" onclick="theOnClicks()" />Pants </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="quidRS" name="quidS" onclick="theOnClicks()"  /> Quidditch Robes 
+<ul style="display:none" id="qSlythCheck">
+<li> <input type="checkbox" id="qRobesS" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="qGlovesS" onclick="theOnClicks()" />Gear </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="yuleS" name="ybS" onclick="theOnClicks()" /> Yule Ball Robes </li>
+</ul>
+</li>
+<li id="ravLi"> <input type="radio" id="rav" name="house" onclick="theOnClicks()"/> Ravenclaw 
+<ul id="ravList" style="display:none">
+<li> <input type="checkbox" id="ravRobes" name="schR" onclick="theOnClicks()" /> School Robes 
+<ul style="display:none" id="sRRavCheck">
+<li> <input type="checkbox" id="scarfR" onclick="theOnClicks()" />Scarf </li>
+<li> <input type="checkbox" id="pHatR" onclick="theOnClicks()" />Pointed Hat </li>
+<li> <input type="checkbox" id="schRobesR" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="tieR" onclick="theOnClicks()"/>Tie </li>
+<li> <input type="checkbox" id="schGlovesR" onclick="theOnClicks()" />Gloves </li>
+<li> <input type="checkbox" id="shirtR" onclick="theOnClicks()" />Jumper </li>
+<li> <input type="checkbox" id="skirtR" onclick="theOnClicks()" />Skirts </li>
+<li> <input type="checkbox" id="pantsR" onclick="theOnClicks()" />Pants </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="quidRR" name="quidR" onclick="theOnClicks()" /> Quidditch Robes 
+<ul style="display:none" id="qRavCheck">
+<li> <input type="checkbox" id="qRobesR" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="qGlovesR" onclick="theOnClicks()" />Gear </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="yuleR" name="ybR" onclick="theOnClicks()" /> Yule Ball Robes </li>
+</ul>
+</li>
+<li id="huffLi"> <input type="radio" id="huff" name="house" onclick="theOnClicks()"/> Hufflepuff 
+<ul id="huffList" style="display:none">
+<li> <input type="checkbox" id="huffRobes" name="schH" onclick="theOnClicks()" /> School Robes 
+<ul style="display:none" id="sRHuffCheck">
+<li> <input type="checkbox" id="scarfH" onclick="theOnClicks()" />Scarf </li>
+<li> <input type="checkbox" id="pHatH" onclick="theOnClicks()" />Pointed Hat </li>
+<li> <input type="checkbox" id="schRobesH" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="tieH" onclick="theOnClicks()" />Tie </li>
+<li> <input type="checkbox" id="schGlovesH" onclick="theOnClicks()" />Gloves </li>
+<li> <input type="checkbox" id="shirtH" onclick="theOnClicks()" />Jumper </li>
+<li> <input type="checkbox" id="skirtH" onclick="theOnClicks()" />Skirts </li>
+<li> <input type="checkbox" id="pantsH" onclick="theOnClicks()" />Pants </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="quidRH" name="quidH" onclick="theOnClicks()" /> Quidditch Robes 
+<ul style="display:none" id="qHuffCheck">
+<li> <input type="checkbox" id="qRobesH" onclick="theOnClicks()" />Robes </li>
+<li> <input type="checkbox" id="qGlovesH" onclick="theOnClicks()" />Gear </li>
+</ul>
+</li>
+<li> <input type="checkbox" id="yuleH" name="ybH" onclick="theOnClicks()" /> Yule Ball Robes </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</form>
+</div>
+<div id="robesTable">
+<table id="shoppingList">
+<tr class="robestr">
+<td class="robestd">
+<img id="iScarfG" src="scarfG.jpg" alt="griffScarf" class="images" />
+<img id="iScarfS" src="scarfS.jpg" alt="slythScarf" class="images" />
+<img id="iScarfR" src="scarfR.jpg" alt="ravScarf" class="images" />
+<img id="iScarfH" src="scarfH.jpg" alt="huffScarf" class="images" />
+</td>
+<td><p id="scarfP">0.25 Galleons</p></td>
+</tr>
+<tr>
+<td><img id="ipHat" src="pHat.jpg" alt="pointedHat" class="images" /></td>
+<td><p id="pHatP">0.50 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iTieG" src="tieG.jpg" alt="griffTie" class="images" />
+<img id="iTieS" src="tieS.jpg" alt="slythTie" class="images" />
+<img id="iTieR" src="tieR.jpg" alt="ravTie" class="images" />
+<img id="iTieH" src="tieH.jpg" alt="huffTie" class="images" />
+</td>
+<td><p id="tieP">0.10 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iGloves" src="gloves.JPG" alt="gloves" class="images" />
+</td>
+<td><p id="glovesP">1 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iRobeG" src="robesG.jpg" alt="griffRobes" class="images" />
+<img id="iRobeS" src="robesS.jpg" alt="slythRobes" class="images" />
+<img id="iRobeR" src="robesR.jpg" alt="ravRobes" class="images" />
+<img id="iRobeH" src="robesH.jpeg" alt="huffRobes" class="images" />
+</td>
+<td><p id="robesP">7 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iShirtG" src="shirtG.jpg" alt="griffShirt" class="images" />
+<img id="iShirtS" src="shirtS.jpeg" alt="slythShirt" class="images" />
+<img id="iShirtR" src="shirtR.jpg" alt="ravShirt" class="images" />
+<img id="iShirtH" src="shirtH.jpg" alt="huffShirt" class="images" />
+</td>
+<td><p id="shirtP">5 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iSkirt" src="skirt.jpeg" alt="skirts" class="images" />
+</td>
+<td><p id="skirtP">4 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iPants" src="pants.jpg" alt="pants" class="images" />
+</td>
+<td><p id="pantsP">4 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iQRobeG" src="qRG.jpeg" alt="griffQRobes" class="images" />
+<img id="iQRobeS" src="qRS.jpg" alt="slythQRobes" class="images" />
+<img id="iQRobeR" src="qRR.jpg" alt="ravQRobes" class="images" />
+<img id="iQRobeH" src="qRH.jpeg" alt="huffQRobes" class="images" />
+</td>
+<td><p id="qrobesP">9 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iGear" src="gear.jpg" alt="quidGear" class="images" />
+</td>
+<td><p id="gearP">10 Galleons</p></td>
+</tr>
+<tr>
+<td>
+<img id="iYB" src="yb.jpg" alt="yuleRobes" class="images" />
+</td>
+<td><p id="ybP">12 Galleons</p></td>
+</tr>
+</table>
+</div>
+<div id="thexmlhttp"></div>
+<div class="footer">
+    <p><em>This website is developed as an educational project.</em></p>
+    <p>Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+    </div>
+</body>
+</html>

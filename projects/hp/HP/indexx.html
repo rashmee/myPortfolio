@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Course Catalog</title>
+<link rel="stylesheet" type="text/css" href="thecss.css"/>
+<script type="text/javascript">
+	document.write(document.lastModified);// displays the date this page was last modified
+</script>
+</head>
+<body id="cssbody">
+
+<div id="div1" class="s1">*</div>
+<div id="div2" class="s2">*</div>
+<div id="div3" class="s3">*</div>
+<div id="div4" class="s4">*</div>
+<script type = "text/javascript">
+//<![CDATA[
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+
+var nav = (!document.all || window.opera);
+var tmr = null;
+var spd = 50;// speed the stars move
+var x = 0; //setting x to 0
+var x_offset = 5; //setting x_offset to 5
+var y = 0; //setting y to 0
+var y_offset = 15; //setting y_offset to 15
+
+document.onmousemove = get_mouse; //the .onmousemove event to show where the pointer is moving while it is over an element
+
+//new function 
+function get_mouse(e)
+{    
+  x = (nav) ? e.pageX : event.clientX+standardbody.scrollLeft; //the .pageX property returns the position of the mouse pointer, relative to the left edge of the document.
+  y = (nav) ? e.pageY : event.clientY+standardbody.scrollTop; //the .pageY property returns the position of the mouse pointer, relative to the top edge of the document.
+  x += x_offset;
+  y += y_offset;
+  beam(1);     
+}
+ //start function
+function beam(n)
+{
+  if(n<5)
+  {
+				document.getElementById('div'+n).style.top=y+'px' //will get the top position of the div id 
+				document.getElementById('div'+n).style.left=x+'px' ////will get the left position of the div id 
+				document.getElementById('div'+n).style.visibility='visible' //will make the sparkles visible
+    			n++; //increment n 
+    			tmr=setTimeout("beam("+n+")",spd); //will call a function or evaluates an expression after a specified number of milliseconds.
+  }
+  else
+  {
+     clearTimeout(tmr); //will clear the setTimeout() function
+     fade(4);
+  }   
+} 
+
+//start function
+function fade(n)
+{
+  if(n>0) 
+  {
+				document.getElementById('div'+n).style.visibility='hidden' //will hide the sparkles
+    			n--; //decreament n
+    			tmr=setTimeout("fade("+n+")",spd); //set the timeout
+  }
+  else clearTimeout(tmr); //clear timeout
+} 
+
+// -->
+//]]>
+</script>
+<div class="csscontainer">
+  <div class="cssheader"><!-- end .header -->
+  <h1 id="cssh1head"> <img alt="books" class="free1" src="books.jpg"  /> Welcome <img alt="parchment" class="free1" src="books.jpg"  /> </h1>
+  </div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="indexx.html">Course Catalog</a></li>
+      <li><a href="cclasses.html" >Core Classes</a></li>
+      <li><a href="electives.html" >Electives</a></li>
+      <li><a href="excurric.html" >Extra Curricular</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="profile.html" target="_blank">Make your own Profile</a></li>
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="csscontent">
+    <h1 id="cssh1">What you should be prepared for...</h1>
+    <p class="csspcont">There are many number of classes taught at <a href="http://harrypotter.wikia.com/wiki/Hogwarts_School_of_Witchcraft_and_Wizardry" class="cssa" target="_blank">Hogwarts School of Witchcraft and Wizardry</a>. Each Student has to first complete the <a href="#intlink1" class="cssa"> core curriculam</a> and then choose <a href="#intlink2" class="cssa"> electives </a> that become available from their third year and up. In the fifth year of the student, the student must take their <a href="http://harrypotter.wikia.com/wiki/Ordinary_Wizarding_Level" class="cssa" target="_blank">Ordinary Wizarding Test (O.W.L.)</a> exams and get a passing grade to continue with the program and finally take the <a href="http://harrypotter.wikia.com/wiki/Nastily_Exhausting_Wizarding_Test" class="cssa" target="_blank">Nastily Exhausting Wizarding Test (N.E.W.T)</a>. After the O.W.L.S, in the sixth year, students may drop some classes with the Head of the House's approval. An option for student who would like to continue and take a bulk of courses is to apply for <a href="http://harrypotter.wikia.com/wiki/Time-Turner" class="cssa" target="_blank">Time-Turners</a>. </p>
+    <h2 class="cssh2"> Admission </h2>
+    <p class="csspcont">The <a href="#aletter" class="cssa">letter of admission</a> to the prestigeous Hogwarts School of Witchcraft and Wizardry is sent to the witches and wizards born in Britain before their first year. A magical quill writes down the name of every magical child born in Britian with the date and time of their birth. This way letters are sent out to all the magical time at the right time. If you have been admitted then you will receive a letter that looks like this:</p>
+    <img alt="letter" id="aletter" src="HogwartsAcceptanceLetter.png" />
+    <h2 class="cssh2"> Course Requirements </h2>
+    <ol id="cssol1">
+    <li class="licss"><a href="cclasses.html" target="_blank" class="cssa" id="intlink1">Core Classes</a></li>
+    <li class="licss"><a href="electives.html" target="_blank" class="cssa" id="intlink2">Electives</a></li>
+    <li class="licss"><a href="excurric.html" target="_blank" class="cssa">Extra-curricular subjects</a></li>
+    </ol>
+    <!-- end .content --></div>
+  <div class="footer">
+    <p id="foot1"><em>This website is developed as an educational project.</em></p>
+    <p id="foot2">Certain materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the multimedia fair use guidelines and are restricted from further use.</p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

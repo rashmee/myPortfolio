@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS Document */
+table  
+{ 
+	border: 1px thick dotted black; 
+	border-collapse: separate; 
+    background-color: #3385FF; 
+	padding: 3px; 
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	text-align:center;
+}
+td 
+{ 
+	border: 1px thick solid black; 
+	padding: 3px; 
+}
+tr
+{
+	border: 1px thick solid black; 
+	padding: 3px;
+}
+
+th
+{
+	border: 1px solid gray; 
+	padding: 3px; 
+	background-color: black;
+}
+tbody > tr:nth-child(odd) 
+{ 
+	background-color: #FF4747; 
+}
