@@ -47,7 +47,7 @@ body, html {
     z-index: 100;
     position: fixed;
     bottom: 75%;
-    left: 89.75%;
+    left: 87.75%;
 }
 
 .testA + .tooltip > .tooltip-inner {
@@ -332,4 +332,40 @@ figcaption {
 
 .horseCaps {
     text-align: center;
+}
+
+#theProjects {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    background-image: url("contactMe.png");
+    min-height: 100%;
+    opacity: 0.75;
+    color: #001433;
+    padding: 10px;
+}
+
+#theProjects form table {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    color: #001433;
+    padding: 5px;
+    font-size: 21px;
+}
+
+#theProjects form table input[type=text] {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    color: #001433;
+    font-size: 15px;
+}
+
+#theProjects form table input[type=submit] {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    background-color: #001433;
+    color: #fff;
+    font-size: 19px;
+}
+
+#theProjects form table input[type=reset] {
+    font: 400 19px/1.8 'Cormorant Garamond', serif;
+    background-color: #001433;
+    color: #fff;
+    font-size: 19px;
 }

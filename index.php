@@ -557,11 +557,12 @@ $('.testA').tooltip({trigger: 'manual'}).tooltip('show');
 <div class="contactCap">
     <h1 id="sayHello" align="center">Say Hello!</h1>
     <br /><br />
-     <p align="center" id="contactEmail">If you would like to work with me or discuss my projects, feel free to shoot me an <a href="mailto:rashmee.prakash@gmail.com?Subject=Hello!%20I%20would%20like%20to%20discuss%20your%20portfolio" target="_top"><u>email</u></a> or fill out the form below and I will get back to you as soon as possible.</p>
+     <p align="center" id="contactEmail">If you would like to work with me or discuss my projects, feel free to shoot me an <a href="mailto:rashmee.prakash@gmail.com?Subject=Hello!%20I%20would%20like%20to%20discuss%20your%20portfolio" target="_top"><u>email</u></a> or please click on the link below to fill out a form and I will get back to you as soon as possible.</p>
      <br /><br />
      <div class="contactList">
          <div class="contTable">
-             <p align="center"  id="theValidate"><i><?php echo $validate; ?></i></p>
+             <a href="#" class="btn btn-warning btn-lg" role="button">Contact Form</a>
+             <!-- <p align="center"  id="theValidate"><i><?php echo $validate; ?></i></p>
                   <p align="center" id="theThankYou"><strong><?php echo $thankYou; ?></strong></p>
                   <p align="center" id="theSorry"><strong><?php echo $sorryMsg; ?></strong></p>
               <fieldset align="center" id="contactFieldset">
@@ -593,7 +594,7 @@ $('.testA').tooltip({trigger: 'manual'}).tooltip('show');
                       </tr>
                   </table>
                   </form>
-                  </fieldset>
+                  </fieldset> -->
                   <br /><br />
             <p align="center" id="thanks">Thank you for viewing my portfolio!</p>
          </div>
