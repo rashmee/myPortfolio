@@ -85,6 +85,8 @@ $('#conGlyph').click( function(){
     $(this).find('span').toggleClass('glyphicon-ice-lolly').toggleClass('glyphicon-ice-lolly-tasted');
 });
 
+$('.testA').tooltip({trigger: 'manual'}).tooltip('show');
+
 });
 </script>
 
@@ -102,9 +104,7 @@ $('#conGlyph').click( function(){
 </div>
 <div class="divMenu">
     <ul class="theMenu">
-        <li>
-            Menu
-        </li>
+        <li><h3><font color="white">Menu</font></h3></li>
         <li>
             <a class="testA" id="abtMe" href="#nameDev" data-toggle="tooltip" data-placement="right" title="About Me">
                 <span class="glyphicon glyphicon-ice-lolly"></span>
@@ -191,7 +191,7 @@ $('#conGlyph').click( function(){
 <div class="bgimg-3" id="projects">
     <div class="projectsCap">
           <div class="form-group">
-              <input type="text" ng-model="searchProject"  class="form-control" placeholder="Enter Project/Skill">
+              <input type="text" ng-model="searchProject"  class="form-control" placeholder="Enter Project">
               <br />
           </div>
           <div class="projectsDiv">
