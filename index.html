@@ -71,6 +71,20 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 // $(".lb-image").removeAttr("style");
 // $(".lb-image").attr("width","700");
 // $(".lb-image").attr("height","700");
+
+$('#abtMe').click( function(){
+    $(this).find('span').toggleClass('glyphicon-ice-lolly').toggleClass('glyphicon-ice-lolly-tasted');
+});
+$('#skillGlyph').click( function(){
+    $(this).find('span').toggleClass('glyphicon-ice-lolly').toggleClass('glyphicon-ice-lolly-tasted');
+});
+$('#projGlyph').click( function(){
+    $(this).find('span').toggleClass('glyphicon-ice-lolly').toggleClass('glyphicon-ice-lolly-tasted');
+});
+$('#conGlyph').click( function(){
+    $(this).find('span').toggleClass('glyphicon-ice-lolly').toggleClass('glyphicon-ice-lolly-tasted');
+});
+
 });
 </script>
 
@@ -89,13 +103,34 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 <div class="divMenu">
     <ul class="theMenu">
         <li>
-            <a class="testA" href="#nameDev" data-toggle="tooltip" data-placement="right" title="About Me">
+            Menu
+        </li>
+        <li>
+            <a class="testA" id="abtMe" href="#nameDev" data-toggle="tooltip" data-placement="right" title="About Me">
                 <span class="glyphicon glyphicon-ice-lolly"></span>
             </a>
         </li>
         <li>&nbsp;</li>
         <li>
-            <a class="testA" href="#skills" data-toggle="tooltip" data-placement="right" title="Skills">
+            <a class="testA" id="skillGlyph" href="#skills" data-toggle="tooltip" data-placement="right" title="Skills">
+                <span class="glyphicon glyphicon-ice-lolly"></span>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+            <a class="testA" id="projGlyph" href="#projects" data-toggle="tooltip" data-placement="right" title="Projects">
+                <span class="glyphicon glyphicon-ice-lolly"></span>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+            <a class="testA" href="Resume-RashmeePrakash.pdf" target="_blank" data-toggle="tooltip" data-placement="right" title="R&eacute;sum&eacute;">
+                <span class="glyphicon glyphicon-ice-lolly"></span>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+        <li>
+            <a class="testA" id="conGlyph" href="#contact" data-toggle="tooltip" data-placement="right" title="Contact Me">
                 <span class="glyphicon glyphicon-ice-lolly"></span>
             </a>
         </li>
@@ -153,7 +188,7 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
   </div>
 </div>
 
-<div class="bgimg-3">
+<div class="bgimg-3" id="projects">
     <div class="projectsCap">
           <div class="form-group">
               <input type="text" ng-model="searchProject"  class="form-control" placeholder="Enter Project/Skill">
@@ -478,17 +513,92 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
               ]">
               </div>
               <ul class="list-group">
-                  <!-- <a href="#" rel="popover" title="Popover Header" data-popover-content="#myPopover" data-trigger="focus">My Popover</a> -->
-                  <li class="list-group-item {{project.projectClass}}"  ng-repeat="project in projects | filter:searchProject"><a href="#" rel="popover" title="{{project.theProject}}" data-popover-content="#{{project.projectContent}}"><img ng-src="{{project.projectImg}}" class="img-circle" width="195" height="195" /></a> &nbsp;&nbsp;&nbsp; <span class="projectName">{{project.theProject}}</span></li>
+                  <li class="list-group-item {{project.projectClass}}"  ng-repeat="project in projects | filter:searchProject"><a href="#" rel="popover" title="{{project.theProject}}" data-trigger="focus" data-popover-content="#{{project.projectContent}}"><img ng-src="{{project.projectImg}}" class="img-circle" width="195" height="195" /></a> &nbsp;&nbsp;&nbsp; <span class="projectName">{{project.theProject}}</span></li>
               </ul>
           </div>
     </div>
 </div>
 
 
-<div class="bgimg-4">
+<div class="bgimg-4" id="contact">
   <div class="caption">
-    <span class="border">COOL!</span>
+      <?php
+
+    if (isset($_POST['fullName']) && isset($_POST['phNum']) && isset($_POST['emailAddress']) && isset($_POST['message'])) {
+
+        $fullName = $_POST['fullName'];
+        $phNum = $_POST['phNum'];
+        $emailAddress = $_POST['emailAddress'];
+        $message = $_POST['message'];
+
+        if (!empty($fullName) && !empty($phNum) && !empty($emailAddress) && !empty($message) ) {
+
+        $to = 'rashmee.prakash@gmail.com';
+        $subject = 'Portfolio View';
+        $body = $fullName."\n".$phNum."\n".$message;
+        $headers = 'From: '.$emailAddress;
+
+        if (@mail($to, $subject, $body, $headers)) {
+
+            $thankYou =  'Thank you for contacting me. I will be in touch soon!';
+        }
+        else {
+            $sorryMsg =  'Sorry, an error occurred. Please try again later.';
+        }
+
+        }
+        else {
+            $validate =  'All fields are required!';
+        }
+    }
+
+?>
+
+<div class="contactCap">
+    <h1 id="sayHello" align="center">Say Hello!</h1>
+    <br /><br />
+     <p align="center" id="contactEmail">If you would like to work with me or discuss my projects, feel free to shoot me an <a href="mailto:rashmee.prakash@gmail.com?Subject=Hello!%20I%20would%20like%20to%20discuss%20your%20portfolio" target="_top"><u>email</u></a> or fill out the form below and I will get back to you as soon as possible.</p>
+     <br /><br />
+     <div class="contactList">
+         <div class="contTable">
+             <p align="center"  id="theValidate"><i><?php echo $validate; ?></i></p>
+                  <p align="center" id="theThankYou"><strong><?php echo $thankYou; ?></strong></p>
+                  <p align="center" id="theSorry"><strong><?php echo $sorryMsg; ?></strong></p>
+              <fieldset align="center" id="contactFieldset">
+                  <form action="contact.php" method="post" name="contact_form" id="theContactForm">
+                  <table align="center" id="contactTable">
+                      <tr>
+                          <td><strong>Name:</strong></td>
+                          <td><input type="text" name="fullName" id="fullName" size="35" /></td>
+                      </tr>
+                      <tr>
+                          <td><strong>Phone Number:</strong></td>
+                          <td><input type="text" name="phNum" id="phNum" size="35" /></td>
+                      </tr>
+                      <tr>
+                          <td><strong>Email:</strong></td>
+                          <td><input type="text" name="emailAddress" id="emailAddress" size="35" /></td>
+                      </tr>
+                      <tr>
+                          <td><strong>Message:</strong></td>
+                          <td><textarea name="message" rows="5" cols="35"></textarea></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td>
+                              <input type="submit" name="submit" id="submit" value="Submit" />
+                          &nbsp;
+                              <input type="reset" name="reset" id="reset" value="Reset" />
+                          </td>
+                      </tr>
+                  </table>
+                  </form>
+                  </fieldset>
+                  <br /><br />
+            <p align="center" id="thanks">Thank you for viewing my portfolio!</p>
+         </div>
+     </div>
+</div>
   </div>
 </div>
 
