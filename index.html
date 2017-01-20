@@ -91,13 +91,43 @@ $(".contactBtn").click(function(){
     var conWindow = window.open("contact.html", "", "width=500,height=500");
 });
 
+$('#theSpan').click(function() {
+    console.log("yo");
+        document.getElementById("myDivMenu").style.width = "250px";
+        document.getElementById("bgImg1").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "black";
+        document.getElementById("theSpan").style.display = "none";
+});
+
+$('.closebtn').click(function() {
+        console.log("noYo");
+            document.getElementById("myDivMenu").style.width = "0";
+            document.getElementById("bgImg1").style.marginLeft= "0";
+            document.body.style.backgroundColor = "white";
+            document.getElementById("theSpan").style.display = "block";
+});
+
+// function openNav() {
+//     document.getElementById("myDivMenu").style.width = "250px";
+//     document.getElementById("bgImg1").style.marginLeft = "250px";
+//     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+//     document.getElementById("theSpan").style.display = "none";
+// }
+
+// function closeNav() {
+//     document.getElementById("myDivMenu").style.width = "0";
+//     document.getElementById("bgImg1").style.marginLeft= "0";
+//     document.body.style.backgroundColor = "white";
+//     document.getElementById("theSpan").style.display = "block";
+// }
+
 });
 </script>
 
 </head>
 <body ng-app="">
 
-<div class="bgimg-1">
+<div class="bgimg-1" id="bgImg1">
   <div class="caption" id="nameDev">
       <!-- <table>
           <tr><td>Rashmee Prakash</td></tr>
@@ -106,8 +136,26 @@ $(".contactBtn").click(function(){
     <!-- <span class="border">Rashmee Prakash <br /> Web Developer</span> -->
   </div>
 </div>
-<div class="divMenu">
-    <ul class="theMenu">
+<div class="divMenu" id="myDivMenu">
+    <p id="theSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</p>
+    <br /><br />
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="testA" id="abtMe" href="#nameDev">
+        <span class="glyphicon glyphicon-ice-lolly"></span>About Me
+    </a>
+    <a class="testA" id="skillGlyph" href="#skills">
+        <span class="glyphicon glyphicon-ice-lolly"></span>Skills
+    </a>
+    <a class="testA" id="projGlyph" href="#projects">
+        <span class="glyphicon glyphicon-ice-lolly"></span>Projects
+    </a>
+    <a class="testA" href="Resume-RashmeePrakash.pdf" target="_blank">
+        <span class="glyphicon glyphicon-ice-lolly"></span>R&eacute;sum&eacute;
+    </a>
+    <a class="testA" id="conGlyph" href="#contact">
+        <span class="glyphicon glyphicon-ice-lolly"></span>Contact Me
+    </a>
+    <!-- <ul class="theMenu">
         <li><h3><font color="white">Menu</font></h3></li>
         <li>
             <a class="testA" id="abtMe" href="#nameDev" data-toggle="tooltip" data-placement="right" title="About Me">
@@ -138,10 +186,10 @@ $(".contactBtn").click(function(){
                 <span class="glyphicon glyphicon-ice-lolly"></span>
             </a>
         </li>
-    </ul>
+    </ul> -->
 </div>
 
-<div style="text-align:center;padding:50px 80px;text-align: center;" class="aboutMeDiv">
+<div style="text-align:center;padding:50px 80px;text-align: center;" class="aboutMeDiv" id="abtMeID">
   <h1 id="aboutMe" class="aboutMe" style="text-align:center;">About Me</h1>
   <p>
       I am a graduate of <a href="https://www2.gmu.edu/" target="_blank">George Mason University</a>. I am currently working at <a href="http://www.hurdit.com/" target="_blank">Hurd IT Communications</a> as a Web Developer. I develop web apps from both back end (Coldfusion and Microsoft SQL Server) to front end (HTML, CSS, jQuery/Javascript), user experience and visual design for clients such as <a href="http://www.ctia.org/" target="_blank">CTIA - Everything Wireless</a>.
