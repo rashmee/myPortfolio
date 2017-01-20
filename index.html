@@ -91,18 +91,28 @@ $(".contactBtn").click(function(){
     var conWindow = window.open("contact.html", "", "width=500,height=500");
 });
 
+$('.testA').hide();
+
 $('#theSpan').click(function() {
     console.log("yo");
+        $('.testA').show();
         document.getElementById("myDivMenu").style.width = "250px";
-        document.getElementById("bgImg1").style.marginLeft = "250px";
+        document.getElementById("skills").style.marginLeft = "250px";
+        document.getElementById("projects").style.marginLeft = "250px";
+        document.getElementById("contact").style.marginLeft = "250px";
+        document.getElementById('abtMeID').style.marginLeft = "250px";
         document.body.style.backgroundColor = "black";
         document.getElementById("theSpan").style.display = "none";
 });
 
 $('.closebtn').click(function() {
         console.log("noYo");
+            $('.testA').hide();
             document.getElementById("myDivMenu").style.width = "0";
-            document.getElementById("bgImg1").style.marginLeft= "0";
+            document.getElementById("skills").style.marginLeft= "0";
+            document.getElementById("projects").style.marginLeft = "0";
+            document.getElementById("contact").style.marginLeft = "0";
+            document.getElementById('abtMeID').style.marginLeft = "0";
             document.body.style.backgroundColor = "white";
             document.getElementById("theSpan").style.display = "block";
 });
@@ -137,9 +147,9 @@ $('.closebtn').click(function() {
   </div>
 </div>
 <div class="divMenu" id="myDivMenu">
-    <p id="theSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</p>
+    <p id="theSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</p>
     <br /><br />
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn testA" onclick="closeNav()">&times;</a>
     <a class="testA" id="abtMe" href="#nameDev">
         <span class="glyphicon glyphicon-ice-lolly"></span>About Me
     </a>
