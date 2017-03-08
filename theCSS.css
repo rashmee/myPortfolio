@@ -58,7 +58,7 @@ body, html {
     font-size: 19px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
 }
 
 .divMenu a:hover, .offcanvas a:focus{

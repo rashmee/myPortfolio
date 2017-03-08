@@ -87,7 +87,7 @@ $('.foodClass, .opened').on('shown.bs.popover', function() {
 
 
 $(".contactBtn").click(function(){
-    var conWindow = window.open("contact.html", "", "width=500,height=500");
+    var conWindow = window.open("contact.php", "", "width=500,height=500");
 });
 
 $('.testA').hide();
@@ -148,20 +148,20 @@ $('.closebtn').click(function() {
 <div class="divMenu" id="myDivMenu">
     <p id="theSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</p>
     <br /><br />
-    <a href="javascript:void(0)" class="closebtn testA" onclick="closeNav()">&times;</a>
-    <a class="testA" id="abtMe" href="#nameDev">
+    <a style="display:none" href="javascript:void(0)" class="closebtn testA" onclick="closeNav()">&times;</a>
+    <a style="display:none" class="testA" id="abtMe" href="#nameDev">
         <span class="glyphicon glyphicon-ice-lolly"></span>About Me
     </a>
-    <a class="testA" id="skillGlyph" href="#skills">
+    <a style="display:none" class="testA" id="skillGlyph" href="#skills">
         <span class="glyphicon glyphicon-ice-lolly"></span>Skills
     </a>
-    <a class="testA" id="projGlyph" href="#projects">
+    <a style="display:none" class="testA" id="projGlyph" href="#projects">
         <span class="glyphicon glyphicon-ice-lolly"></span>Projects
     </a>
-    <a class="testA" href="Resume-RashmeePrakash.pdf" target="_blank">
+    <a style="display:none" class="testA" href="Resume-RashmeePrakash.pdf" target="_blank">
         <span class="glyphicon glyphicon-ice-lolly"></span>R&eacute;sum&eacute;
     </a>
-    <a class="testA" id="conGlyph" href="#contact">
+    <a style="display:none" class="testA" id="conGlyph" href="#contact">
         <span class="glyphicon glyphicon-ice-lolly"></span>Contact Me
     </a>
     <!-- <ul class="theMenu">
@@ -226,10 +226,13 @@ $('.closebtn').click(function() {
                                             {theSkill: 'AJAX', skillImg: 'skills/ajax.png'},
                                             {theSkill: 'Bootstrap', skillImg: 'skills/bootstrap.png'},
                                             {theSkill: 'Angular JS', skillImg: 'skills/angular.png'},
+                                            {theSkill: 'Node.js', skillImg: 'skills/node_js.png'},
+                                            {theSkill: 'React JS', skillImg: 'skills/React-JS.png'},
                                             {theSkill: 'Microsoft SQL Server 2012', skillImg: 'skills/sql2012.png'},
                                             {theSkill: 'Microsoft SQL Server 2014', skillImg: 'skills/sql2014.png'},
                                             {theSkill: 'Microsoft SQL Server 2016', skillImg: 'skills/sql2016.png'},
                                             {theSkill: 'Oracle Database Express Edition 11g', skillImg: 'skills/11g.png'},
+                                            {theSkill: 'MongoDB', skillImg: 'skills/mongodb.png'},
                                             {theSkill: 'Tableau Software', skillImg: 'skills/tableau.png'},
                                             {theSkill: 'PL/SQL', skillImg: 'skills/PLSQL.png'},
                                             {theSkill: 'ColdFusion', skillImg: 'skills/cf.png'},
