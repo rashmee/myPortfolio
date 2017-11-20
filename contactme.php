@@ -36,55 +36,27 @@
 <title>Contact</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="theCSS.css"/>
-<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Cormorant+Garamond|Poiret+One|Josefin+Slab|Quicksand|Tangerine');
+</style>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<script>
-$(function(){
-var menu = $('#slide_menu'),
-	menuBtn = $('#button'),
-	body = $(document.body),
-    menuWidth = menu.outerWidth();
-
-    menuBtn.on('click', function(){
-	body.toggleClass('open');
-        if(body.hasClass('open')){
-			body.animate({'left' : menuWidth }, 300);
-			menu.animate({'left' : 0 }, 300);
-		} else {
-			menu.animate({'left' : -menuWidth }, 300);
-			body.animate({'left' : 0 }, 300);
-		}
-    });
-});
+<script type="text/javascript">
+ $(document).ready(function(){
+     $("#submit").click(function(){
+         setTimeout(function() {
+            window.close();
+         }, 3000);
+     });
+  });
 </script>
-
 </head>
 
 <body>
 
-
-<div class="theMenu">
-<nav id="slide_menu">
-  <ul>
-    <li><a href="index.html">About Me</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="Resume-RashmeePrakash.pdf" target="_blank">R&eacute;sum&eacute;</a></li>
-    <li><a href="contact.php">Contact</a></li>
-  </ul>
-</nav>
-
-<input type="image" src="show-menu-icon.png" id="button" alt="Submit" width="48" height="48">
-</div>
-
-<div id="header" align="center">
-	<img src="IMG_1420 copy.png" alt="myPic" width="150" height="140">
-	<h1 id="name">Rashmee Prakash</h1>
-    <hr />
-    <h2 id="abtMe" align="center">Say Hello!</h2>
-</div>
-
 <div id="theProjects">
+<h2 id="abtMe" align="center">Say Hello!</h2>
+
   <p align="center">If you would like to work with me or discuss my projects, feel free to shoot me an <a href="mailto:rashmee.prakash@gmail.com?Subject=Hello!%20I%20would%20like%20to%20discuss%20your%20portfolio" target="_top">email</a> or fill out the form below and I will get back to you as soon as possible.</p>
     <p align="center"  id="theValidate"><i><?php echo $validate; ?></i></p>
         <p align="center" id="theThankYou"><strong><?php echo $thankYou; ?></strong></p>

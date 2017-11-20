@@ -6,7 +6,8 @@
         $phNum = $_POST['phNum'];
         $emailAddress = $_POST['emailAddress'];
         $message = $_POST['message'];
-
+	
+	
         if (!empty($fullName) && !empty($phNum) && !empty($emailAddress) && !empty($message) ) {
 
         $to = 'rashmee.prakash@gmail.com';
@@ -30,6 +31,7 @@
 
 ?>
 
+
 <html>
 <head>
 <meta charset="UTF-8">
@@ -41,13 +43,13 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){
-    $("#submit").click(function(){
-        setTimeout(function() {
-            window.close();
-        }, 3000);
-    });
-});
+ $(document).ready(function(){
+     $("#theContactForm").on("submit", function(){
+          setTimeout(function(){
+              window.close();         
+          }, 3000);     
+          });
+ });
 </script>
 
 </head>
@@ -59,7 +61,7 @@ $(document).ready(function(){
     <p align="center"  id="theValidate"><i><?php echo $validate; ?></i></p>
         <p align="center" id="theThankYou"><strong><?php echo $thankYou; ?></strong></p>
         <p align="center" id="theSorry"><strong><?php echo $sorryMsg; ?></strong></p>
-    <!-- <fieldset align="center" id="contactFieldset"> -->
+    
         <form action="contact.php" method="post" name="contact_form" id="theContactForm">
         <table align="center" id="contactTable">
             <tr>
@@ -76,12 +78,9 @@ $(document).ready(function(){
             </tr>
             <tr>
                 <td><strong>Message:</strong></td>
-                <td><textarea name="message" rows="10" cols="39"></textarea></td>
+                <td><textarea name="message" rows="10" cols="34"></textarea></td>
             </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
+            
             <tr>
                 <td></td>
                 <td>
@@ -92,7 +91,7 @@ $(document).ready(function(){
             </tr>
         </table>
         </form>
-        <!-- </fieldset> -->
+        
 </div>
 </body>
 </html>

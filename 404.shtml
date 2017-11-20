@@ -1,0 +1,15 @@
+<html>
+    <body>
+    <p>This page no longer exists. You will be redirected to the <a href="www.rashmeeprakash.com">homepage</a> in 3 seconds</p>
+    <script>
+        var timer = setTimeout(function() {
+            window.location='http://rashmeeprakash.com'
+        }, 3000);
+    </script>
+</body>
+</html>
+
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                            
+--> 
